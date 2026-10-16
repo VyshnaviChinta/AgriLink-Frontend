@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AgriLink Farmer Portal - List your crop residue and connect directly with verified industrial buyers.">
+  <meta name="theme-color" content="#1B4323">
+  <title>Farmer Portal - List Crop Residue | AgriLink</title>
+
+  <!-- Google Fonts: Multi-Script Noto Sans Stack -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Noto+Sans+Kannada:wght@400;500;600;700;800&family=Noto+Sans+Malayalam:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700;800&family=Noto+Sans+Telugu:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header" role="banner">
+    <div class="navbar-container">
+      <a href="index.html" class="brand-link" aria-label="AgriLink Home">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2L15 8L21 9L17 14L18 20L12 17L6 20L7 14L3 9L9 8L12 2Z" opacity="0.3"></path>
+            <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5a5.52 5.52 0 0 0 3 4.88V17c0-2.5 4.5-5 7-5 1.5 0 2.5 1 2.5 2.5 0 2-2.5 3.5-5 3.5"></path>
+          </svg>
+        </div>
+        <div class="brand-text-group">
+          <span class="brand-title" data-i18n="nav.brand">AgriLink</span>
+          <span class="brand-subtitle" data-i18n="nav.tagline_short">From Smoke to Sustainability</span>
+        </div>
+      </a>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <div class="lang-selector-wrap" title="Change Language">
+          <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <select id="lang-select" class="lang-select" aria-label="Select Language" data-i18n-aria-label="nav.select_lang">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+            <option value="te">తెలుగు</option>
+            <option value="kn">ಕನ್ನಡ</option>
+            <option value="ta">தமிழ்</option>
+            <option value="ml">മലയാളം</option>
+          </select>
+          <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+
+      <div class="nav-overlay" aria-hidden="true"></div>
+
+      <!-- Navigation Menu -->
+      <nav id="primary-nav" class="nav-menu" role="navigation" aria-label="Main menu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#how-it-works" class="nav-link" data-i18n="nav.how_it_works">How It Works</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#impact" class="nav-link" data-i18n="nav.impact">Impact</a>
+          </li>
+          <li class="nav-item">
+            <a href="farmer.html" class="nav-link nav-link-portal active" data-i18n="nav.farmer_portal">Farmer Portal</a>
+          </li>
+          <li class="nav-item">
+            <a href="industry.html" class="nav-link nav-link-portal" data-i18n="nav.industry_portal">Industry Portal</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Farmer Form Page -->
+  <main class="container">
+    
+    <!-- Page Header -->
+    <div class="portal-page-header">
+      <div class="portal-hero-badge farmer">
+        <span>🌾</span>
+        <span data-i18n="farmer_page.badge">Farmer Marketplace</span>
+      </div>
+      <h1 class="portal-page-title" data-i18n="farmer_page.title">List Your Crop Residue</h1>
+      <p class="portal-page-desc" data-i18n="farmer_page.subtitle">
+        Connect directly with verified industrial buyers. Set your expected price per ton and sell agricultural biomass without burning.
+      </p>
+
+      <!-- Accurate Mission Statement (No false claims) -->
+      <div class="portal-notice-banner">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+        <span data-i18n="farmer_page.notice">
+          AgriLink connects farmers directly with industries seeking agricultural biomass. We do not charge listing fees.
+        </span>
+      </div>
+    </div>
+
+    <!-- Farmer Form Card -->
+    <div class="form-card farmer-card">
+      <div class="form-card-header">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+          <h2 class="form-card-title" data-i18n="farmer_page.card_title">🌾 Crop Residue Listing Form</h2>
+          <span class="mock-badge" data-i18n="mock.badge">Demo Mode (Mock Storage)</span>
+        </div>
+        <p class="form-card-subtitle" data-i18n="farmer_page.card_sub">
+          Provide your harvest details and location to connect with matched buyers in your district.
+        </p>
+      </div>
+
+      <!-- Live Feedback Alert Container -->
+      <div id="farmer-alert" class="form-alert" role="alert" aria-live="polite"></div>
+
+      <!-- The Real Form -->
+      <form id="farmer-form" novalidate>
+        <div class="form-grid">
+          
+          <!-- Full Name -->
+          <div class="form-group">
+            <label for="farmer-name" class="form-label">
+              <span data-i18n="form.name">Full Name</span>
+              <span class="req">*</span>
+            </label>
+            <input 
+              type="text" 
+              id="farmer-name" 
+              class="form-control" 
+              placeholder="e.g. Gurpreet Singh" 
+              data-i18n-placeholder="placeholder.name" 
+              required
+              autocomplete="name"
+            >
+            <span id="error-farmer-name" class="field-error" role="alert"></span>
+          </div>
+
+          <!-- Contact Phone (10 digits) -->
+          <div class="form-group">
+            <label for="farmer-phone" class="form-label">
+              <span data-i18n="form.phone">Phone Number (10 digits)</span>
+              <span class="req">*</span>
+            </label>
+            <input 
+              type="tel" 
+              id="farmer-phone" 
+              class="form-control" 
+              placeholder="e.g. 9876543210" 
+              data-i18n-placeholder="placeholder.phone" 
+              pattern="[6-9][0-9]{9}" 
+              maxlength="10" 
+              inputmode="numeric" 
+              required
+              autocomplete="tel"
+            >
+            <span id="error-farmer-phone" class="field-error" role="alert"></span>
+          </div>
+
+          <!-- Residue Type Dropdown -->
+          <div class="form-group">
+            <label for="farmer-residue" class="form-label">
+              <span data-i18n="form.residue_type">Residue Type</span>
+              <span class="req">*</span>
+            </label>
+            <select id="farmer-residue" class="form-control" required>
+              <option value="" data-i18n="residue.select">-- Select Residue Type --</option>
+              <option value="paddy_straw" data-i18n="residue.paddy_straw">Paddy Straw</option>
+              <option value="wheat_straw" data-i18n="residue.wheat_straw">Wheat Straw</option>
+              <option value="sugarcane_bagasse" data-i18n="residue.sugarcane_bagasse">Sugarcane Bagasse</option>
+              <option value="maize_stalk" data-i18n="residue.maize_stalk">Maize Stalk</option>
+              <option value="cotton_stalk" data-i18n="residue.cotton_stalk">Cotton Stalk</option>
+            </select>
+            <span id="error-farmer-residue" class="field-error" role="alert"></span>
+          </div>
+
+          <!-- Quantity in Tons -->
+          <div class="form-group">
+            <label for="farmer-qty" class="form-label">
+              <span data-i18n="form.quantity_tons">Quantity (Tons)</span>
+              <span class="req">*</span>
+            </label>
+            <input 
+              type="number" 
+              id="farmer-qty" 
+              class="form-control" 
+              placeholder="e.g. 25" 
+              data-i18n-placeholder="placeholder.quantity" 
+              min="0.1" 
+              step="any" 
+              required
+            >
+            <span id="error-farmer-qty" class="field-error" role="alert"></span>
+          </div>
+
+          <!-- State Dropdown -->
+          <div class="form-group">
+            <label for="farmer-state" class="form-label">
+              <span data-i18n="form.state">State</span>
+              <span class="req">*</span>
+            </label>
+            <select id="farmer-state" class="form-control" required>
+              <option value="" data-i18n="state.select">-- Select State --</option>
+            </select>
+            <span id="error-farmer-state" class="field-error" role="alert"></span>
+          </div>
+
+          <!-- District Dropdown -->
+          <div class="form-group">
+            <label for="farmer-district" class="form-label">
+              <span data-i18n="form.district">District</span>
+              <span class="req">*</span>
+            </label>
+            <select id="farmer-district" class="form-control" disabled required>
+              <option value="" data-i18n="district.select_state_first">-- Select State First --</option>
+            </select>
+            <span id="error-farmer-district" class="field-error" role="alert"></span>
+          </div>
+
+          <!-- Village (Free Text) -->
+          <div class="form-group">
+            <label for="farmer-village" class="form-label">
+              <span data-i18n="form.village">Village</span>
+              <span class="req">*</span>
+            </label>
+            <input 
+              type="text" 
+              id="farmer-village" 
+              class="form-control" 
+              placeholder="e.g. Raikot" 
+              data-i18n-placeholder="placeholder.village" 
+              required
+            >
+            <span id="error-farmer-village" class="field-error" role="alert"></span>
+          </div>
+
+          <!-- Expected Price per Ton in Rupees -->
+          <div class="form-group">
+            <label for="farmer-price" class="form-label">
+              <span data-i18n="form.expected_price">Expected Price / Ton (₹)</span>
+              <span class="req">*</span>
+            </label>
+            <input 
+              type="number" 
+              id="farmer-price" 
+              class="form-control" 
+              placeholder="e.g. 2200" 
+              data-i18n-placeholder="placeholder.expected_price" 
+              min="1" 
+              step="any" 
+              required
+            >
+            <span id="error-farmer-price" class="field-error" role="alert"></span>
+          </div>
+
+        </div>
+
+        <!-- Submit Actions -->
+        <div class="form-actions">
+          <button type="submit" id="farmer-submit-btn" class="btn-submit farmer">
+            <span class="btn-spinner" aria-hidden="true"></span>
+            <span class="btn-text" data-i18n="form.submit_farmer">List Crop Residue</span>
+          </button>
+          <p class="form-footer-note" data-i18n="form.footer_note">
+            Your information will only be shared with verified AgriLink marketplace partners.
+          </p>
+        </div>
+      </form>
+    </div>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding-top: 0;">
+        <p>&copy; 2026 AgriLink. <span data-i18n="footer.rights">All rights reserved. Transforming agricultural smoke into sustainable energy.</span></p>
+        <p><a href="index.html" style="color: #fff; text-decoration: underline;" data-i18n="nav.home">Home</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

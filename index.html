@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AgriLink - From Smoke to Sustainability. Connecting farmers with industries to monetize crop residue and eliminate stubble burning.">
+  <meta name="theme-color" content="#1B4323">
+  <title>AgriLink - From Smoke to Sustainability</title>
+
+  <!-- Google Fonts: Multi-Script Noto Sans Stack -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Noto+Sans+Kannada:wght@400;500;600;700;800&family=Noto+Sans+Malayalam:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700;800&family=Noto+Sans+Telugu:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       Site Header / Navigation Bar
+       ========================================================================= -->
+  <header class="site-header" role="banner">
+    <div class="navbar-container">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-link" aria-label="AgriLink Home">
+        <div class="brand-icon">
+          <!-- Bio-Cycle Leaf Icon -->
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2L15 8L21 9L17 14L18 20L12 17L6 20L7 14L3 9L9 8L12 2Z" opacity="0.3"></path>
+            <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5a5.52 5.52 0 0 0 3 4.88V17c0-2.5 4.5-5 7-5 1.5 0 2.5 1 2.5 2.5 0 2-2.5 3.5-5 3.5"></path>
+          </svg>
+        </div>
+        <div class="brand-text-group">
+          <span class="brand-title" data-i18n="nav.brand">AgriLink</span>
+          <span class="brand-subtitle" data-i18n="nav.tagline_short">From Smoke to Sustainability</span>
+        </div>
+      </a>
+
+      <!-- Header Actions: Language Switcher & Hamburger Toggle -->
+      <div class="header-actions">
+        <!-- Language Selector Dropdown -->
+        <div class="lang-selector-wrap" title="Change Language">
+          <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <select id="lang-select" class="lang-select" aria-label="Select Language" data-i18n-aria-label="nav.select_lang">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+            <option value="te">తెలుగు</option>
+            <option value="kn">ಕನ್ನಡ</option>
+            <option value="ta">தமிழ்</option>
+            <option value="ml">മലയാളം</option>
+          </select>
+          <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+
+        <!-- Mobile Drawer Toggle Button -->
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+
+      <!-- Backdrop Overlay for Mobile Drawer -->
+      <div class="nav-overlay" aria-hidden="true"></div>
+
+      <!-- Navigation Menu -->
+      <nav id="primary-nav" class="nav-menu" role="navigation" aria-label="Main menu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link active" data-i18n="nav.home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#how-it-works" class="nav-link" data-i18n="nav.how_it_works">How It Works</a>
+          </li>
+          <li class="nav-item">
+            <a href="#impact" class="nav-link" data-i18n="nav.impact">Impact</a>
+          </li>
+          <li class="nav-item">
+            <a href="farmer.html" class="nav-link nav-link-portal" data-i18n="nav.farmer_portal">Farmer Portal</a>
+          </li>
+          <li class="nav-item">
+            <a href="industry.html" class="nav-link nav-link-portal" data-i18n="nav.industry_portal">Industry Portal</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- =========================================================================
+         Hero Section
+         ========================================================================= -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="container hero-content">
+        
+        <!-- Context Badge -->
+        <div class="hero-badge">
+          <span class="badge-pulse"></span>
+          <span data-i18n="hero.badge">Circular Biomass Initiative</span>
+        </div>
+
+        <!-- Tagline & Heading -->
+        <h1 id="hero-title" class="hero-title" data-i18n="nav.brand">AgriLink</h1>
+        <div class="hero-tagline-wrap">
+          <h2 class="hero-tagline" data-i18n="hero.tagline">From Smoke to Sustainability</h2>
+        </div>
+
+        <p class="hero-description" data-i18n="hero.description">
+          Empowering farmers to turn crop residue into guaranteed income and clean industrial energy. Stop stubble burning, enrich our soil, and ensure clean air for all.
+        </p>
+
+        <!-- Two Large Buttons: Farmer and Industry -->
+        <div class="hero-actions" role="group" aria-label="Portal Selection">
+          
+          <!-- Large Farmer Button (Links to farmer.html) -->
+          <a href="farmer.html" class="btn-portal btn-farmer" id="cta-farmer" aria-label="Farmer Portal: Sell crop residue and earn">
+            <div class="btn-portal-icon" aria-hidden="true">
+              <!-- Tractor / Sprout Icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 17m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+                <path d="M7 15l0 .01"></path>
+                <path d="M19 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                <path d="M10.5 17l6.5 0"></path>
+                <path d="M20 15.2l-3.2 -3.2a2 2 0 0 0 -1.4 -.6l-3.4 0l-2 -4h-4v4"></path>
+                <path d="M16 5l-1.5 2"></path>
+              </svg>
+            </div>
+            <div class="btn-portal-text">
+              <span class="btn-portal-tag" data-i18n="hero.btn_farmer_tag">For Farmers</span>
+              <span class="btn-portal-title" data-i18n="hero.btn_farmer_title">I am a Farmer</span>
+              <span class="btn-portal-sub" data-i18n="hero.btn_farmer_sub">Sell Crop Residue & Earn</span>
+            </div>
+            <div class="btn-portal-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </div>
+          </a>
+
+          <!-- Large Industry Button (Links to industry.html) -->
+          <a href="industry.html" class="btn-portal btn-industry" id="cta-industry" aria-label="Industry Portal: Procure green biomass and pellets">
+            <div class="btn-portal-icon" aria-hidden="true">
+              <!-- Factory / Renewable Bio-Power Icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21h18"></path>
+                <path d="M5 21V7l8 4V7l6 4v10"></path>
+                <path d="M9 13v2"></path>
+                <path d="M9 17v2"></path>
+                <path d="M14 13v2"></path>
+                <path d="M14 17v2"></path>
+              </svg>
+            </div>
+            <div class="btn-portal-text">
+              <span class="btn-portal-tag" data-i18n="hero.btn_industry_tag">For Enterprises</span>
+              <span class="btn-portal-title" data-i18n="hero.btn_industry_title">I am an Industry</span>
+              <span class="btn-portal-sub" data-i18n="hero.btn_industry_sub">Procure Green Biomass & Pellets</span>
+            </div>
+            <div class="btn-portal-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="hero-trust-bar">
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <span data-i18n="hero.trust_free">100% Free for Farmers</span>
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+            <span data-i18n="hero.trust_pickup">Guaranteed Farmgate Pickup</span>
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+              <line x1="2" y1="10" x2="22" y2="10"></line>
+            </svg>
+            <span data-i18n="hero.trust_payment">Direct Bank Payouts</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Impact Metrics Section
+         ========================================================================= -->
+    <section id="impact" class="metrics-section" aria-label="Key Impact Metrics">
+      <div class="container">
+        <div class="metrics-grid">
+          
+          <div class="metric-card">
+            <div class="metric-value" data-i18n="metrics.tonnes_val">150,000+</div>
+            <div class="metric-label" data-i18n="metrics.tonnes_label">Tonnes Stubble Repurposed</div>
+            <div class="metric-sub" data-i18n="metrics.tonnes_sub">Averted open field fire emissions</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-value amber" data-i18n="metrics.payout_val">₹14.8 Cr</div>
+            <div class="metric-label" data-i18n="metrics.payout_label">Direct Farmer Earnings</div>
+            <div class="metric-sub" data-i18n="metrics.payout_sub">Transferred directly via UPI / DBT</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-value earth" data-i18n="metrics.co2_val">210,000</div>
+            <div class="metric-label" data-i18n="metrics.co2_label">Tonnes CO₂ Offset</div>
+            <div class="metric-sub" data-i18n="metrics.co2_sub">Equivalent to millions of clean breaths</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         How It Works Section
+         ========================================================================= -->
+    <section id="how-it-works" class="workflow-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="workflow.tag">The Circular Solution</span>
+          <h2 class="section-title" data-i18n="workflow.title">How AgriLink Works</h2>
+          <p class="section-desc" data-i18n="workflow.desc">
+            A seamless digital bridge from crop harvesting to sustainable industrial energy.
+          </p>
+        </div>
+
+        <div class="workflow-grid">
+          
+          <!-- Step 1 -->
+          <div class="workflow-card">
+            <span class="workflow-card-step" aria-hidden="true">01</span>
+            <div class="workflow-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
+            </div>
+            <h3 class="workflow-card-title" data-i18n="workflow.step1_title">1. Farmer Lists Stubble</h3>
+            <p class="workflow-card-desc" data-i18n="workflow.step1_desc">
+              Farmers register their crop residue (paddy, cotton, sugarcane) with estimated acreage via simple mobile access or toll-free call.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="workflow-card">
+            <span class="workflow-card-step" aria-hidden="true">02</span>
+            <div class="workflow-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="17 1 21 5 17 9"></polyline>
+                <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                <polyline points="7 23 3 19 7 15"></polyline>
+                <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+              </svg>
+            </div>
+            <h3 class="workflow-card-title" data-i18n="workflow.step2_title">2. Mechanized Baling & Pickup</h3>
+            <p class="workflow-card-desc" data-i18n="workflow.step2_desc">
+              Our logistics network brings automated balers directly to the field, safely compacting and loading the straw without any farm effort.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="workflow-card">
+            <span class="workflow-card-step" aria-hidden="true">03</span>
+            <div class="workflow-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+              </svg>
+            </div>
+            <h3 class="workflow-card-title" data-i18n="workflow.step3_title">3. Clean Industrial Conversion</h3>
+            <p class="workflow-card-desc" data-i18n="workflow.step3_desc">
+              Residue is processed into high-grade biomass pellets, bio-CNG, paper pulp, and sustainable power replacing fossil coal.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Dual Portal Previews
+         ========================================================================= -->
+    <section class="portals-section" aria-label="Portal Highlights">
+      <div class="container">
+        <div class="portals-grid">
+          
+          <!-- Farmer Portal Card -->
+          <div class="portal-box farmer-box">
+            <div class="portal-box-header">
+              <span class="portal-badge" data-i18n="portals.farmer_badge">Growers & Producers</span>
+              <h3 class="portal-box-title" data-i18n="portals.farmer_title">Farmer Benefits</h3>
+              <p class="portal-box-desc" data-i18n="portals.farmer_desc">
+                Eliminate the cost of field clearing, avoid pollution fines, and earn predictable supplementary revenue per acre.
+              </p>
+            </div>
+
+            <ul class="portal-features-list">
+              <li class="portal-feature-item">
+                <span class="feature-check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span data-i18n="portals.farmer_f1">Zero machinery expense: Aggregators bale directly at your field</span>
+              </li>
+              <li class="portal-feature-item">
+                <span class="feature-check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span data-i18n="portals.farmer_f2">Fair, transparent MSP-benchmarked pricing per quintal</span>
+              </li>
+              <li class="portal-feature-item">
+                <span class="feature-check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span data-i18n="portals.farmer_f3">Preserves soil organic carbon and micro-nutrients</span>
+              </li>
+            </ul>
+
+            <a href="farmer.html" class="portal-box-cta" data-i18n="portals.farmer_cta">Go to Farmer Portal</a>
+          </div>
+
+          <!-- Industry Portal Card -->
+          <div class="portal-box industry-box">
+            <div class="portal-box-header">
+              <span class="portal-badge" data-i18n="portals.industry_badge">Commercial & Bio-Energy</span>
+              <h3 class="portal-box-title" data-i18n="portals.industry_title">Industry Sourcing</h3>
+              <p class="portal-box-desc" data-i18n="portals.industry_desc">
+                Reliable, calorific bio-feedstock supply chains for thermal plants, bio-refineries, and eco-packaging manufacturers.
+              </p>
+            </div>
+
+            <ul class="portal-features-list">
+              <li class="portal-feature-item">
+                <span class="feature-check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span data-i18n="portals.industry_f1">Certified moisture content & calorific energy value</span>
+              </li>
+              <li class="portal-feature-item">
+                <span class="feature-check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span data-i18n="portals.industry_f2">Long-term bulk supply security with schedule guarantees</span>
+              </li>
+              <li class="portal-feature-item">
+                <span class="feature-check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span data-i18n="portals.industry_f3">Verified ESG compliance & Scope-1 carbon credits</span>
+              </li>
+            </ul>
+
+            <a href="industry.html" class="portal-box-cta" data-i18n="portals.industry_cta">Go to Industry Portal</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       Site Footer
+       ========================================================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        
+        <div class="footer-brand">
+          <div class="brand-link" style="margin-bottom: 0.5rem;">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2L15 8L21 9L17 14L18 20L12 17L6 20L7 14L3 9L9 8L12 2Z" opacity="0.3"></path>
+                <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5a5.52 5.52 0 0 0 3 4.88V17c0-2.5 4.5-5 7-5 1.5 0 2.5 1 2.5 2.5 0 2-2.5 3.5-5 3.5"></path>
+              </svg>
+            </div>
+            <div class="brand-text-group">
+              <span class="brand-title" data-i18n="nav.brand">AgriLink</span>
+              <span class="brand-subtitle" data-i18n="nav.tagline_short">From Smoke to Sustainability</span>
+            </div>
+          </div>
+          <p class="footer-mission" data-i18n="footer.mission">
+            AgriLink eliminates agricultural stubble burning across India by building efficient, profitable supply chains connecting rural farmers with green industries.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n="footer.quick_links">Quick Portals</h4>
+          <ul class="footer-links">
+            <li><a href="farmer.html" data-i18n="nav.farmer_portal">Farmer Portal</a></li>
+            <li><a href="industry.html" data-i18n="nav.industry_portal">Industry Portal</a></li>
+            <li><a href="#how-it-works" data-i18n="nav.how_it_works">How It Works</a></li>
+            <li><a href="#impact" data-i18n="nav.impact">Impact Metrics</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n="footer.resources">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="#" data-i18n="footer.about_us">About Us</a></li>
+            <li><a href="#" data-i18n="footer.contact">Kisan Helpline (Toll-Free)</a></li>
+            <li><a href="#" data-i18n="footer.privacy">Privacy Policy</a></li>
+            <li><a href="#" data-i18n="footer.terms">Terms of Service</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 AgriLink. <span data-i18n="footer.rights">All rights reserved. Transforming agricultural smoke into sustainable energy.</span></p>
+        <p>Built for Bharat &bull; Swachh Bharat &bull; Green Energy Mission</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
