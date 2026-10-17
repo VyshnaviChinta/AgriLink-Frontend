@@ -26,6 +26,7 @@
       'nav.how_it_works': 'How It Works',
       'nav.farmer_portal': 'Farmer Portal',
       'nav.industry_portal': 'Industry Portal',
+      'nav.matches': 'Matches',
       'nav.impact': 'Impact',
       'nav.select_lang': 'Language',
 
@@ -177,7 +178,53 @@
       'error.price_positive': 'Please enter a valid price greater than 0',
       'error.select_option': 'Please choose an option from the list',
       'error.server_unreachable': 'Unable to connect to the server. Please try again later.',
-      'error.general': 'An unexpected error occurred. Please try again.'
+      'error.general': 'An unexpected error occurred. Please try again.',
+
+      // Matches Portal Specific Keys
+      'matches.badge': 'Smart Matching Engine',
+      'matches.title': 'Biomass Deals & Matches',
+      'matches.subtitle': 'Compatible farmer residue listings matched with industrial buyers based on residue type, distance, price, and volume.',
+      'matches.count': 'Compatible Deals Found',
+      'matches.load_demo': 'Load Demo Data',
+      'matches.clear_data': 'Clear Data',
+      'matches.sample_data': 'Sample Data',
+      'matches.filter_residue': 'Residue Type',
+      'matches.filter_state': 'State',
+      'matches.filter_max_price': 'Max Price / Ton (₹)',
+      'matches.sort_by': 'Sort By',
+      'matches.sort_score': 'Highest Match Score',
+      'matches.sort_distance': 'Shortest Distance',
+      'matches.sort_price': 'Lowest Price / Ton',
+      'matches.all_residues': 'All Residues',
+      'matches.all_states': 'All States',
+      'matches.col_farmer': 'Farmer',
+      'matches.col_industry': 'Industry Buyer',
+      'matches.col_residue': 'Residue',
+      'matches.col_qty': 'Quantity',
+      'matches.col_distance': 'Distance',
+      'matches.col_farmer_ask': 'Farmer Ask',
+      'matches.col_industry_offer': 'Industry Offer',
+      'matches.col_gap': 'Price Margin',
+      'matches.col_score': 'Match Score',
+      'matches.col_action': 'Action',
+      'matches.book_btn': 'Book Deal',
+      'matches.booked': 'Booked',
+      'status.pending': 'Pending Confirmation',
+      'status.available': 'Available',
+      'matches.empty_title': 'No Matches Found',
+      'matches.empty_desc': 'No compatible matches available yet. Click "Load demo data" above to explore sample deals, or register via the Farmer and Industry portals.',
+      'matches.score_breakdown_title': 'Match Score Breakdown',
+      'matches.score_tap_hint': 'Tap to view points breakdown',
+      'matches.score_residue': 'Residue Compatibility',
+      'matches.score_distance': 'Geographic Distance',
+      'matches.score_price': 'Price Competitiveness',
+      'matches.score_quantity': 'Quantity Coverage',
+      'matches.score_total': 'Total Match Score',
+      'matches.modal_title': 'Confirm Biomass Booking',
+      'matches.modal_desc': 'Submit a deal proposal between this farmer and industry buyer. Both parties will be notified for confirmation.',
+      'matches.modal_confirm': 'Confirm Booking',
+      'matches.modal_cancel': 'Cancel',
+      'matches.booking_success': 'Booking created successfully! Status set to Pending.'
     },
 
     // ========================================================================
@@ -190,6 +237,7 @@
       'nav.how_it_works': 'कार्यप्रणाली',
       'nav.farmer_portal': 'किसान पोर्टल',
       'nav.industry_portal': 'उद्योग पोर्टल',
+      'nav.matches': 'सटीक मैच',
       'nav.impact': 'हमारा प्रभाव',
       'nav.select_lang': 'भाषा',
 
@@ -341,7 +389,53 @@
       'error.price_positive': 'कृपया ० से अधिक मान्य मूल्य दर्ज करें',
       'error.select_option': 'कृपया सूची में से एक विकल्प चुनें',
       'error.server_unreachable': 'Unable to connect to the server. Please try again later.',
-      'error.general': 'एक अप्रत्याशित त्रुटि हुई। कृपया पुनः प्रयास करें।'
+      'error.general': 'एक अप्रत्याशित त्रुटि हुई। कृपया पुनः प्रयास करें।',
+
+      // Matches Portal Specific Keys
+      'matches.badge': 'स्मार्ट मैचिंग इंजन',
+      'matches.title': 'बायोमास सौदे और मिलान',
+      'matches.subtitle': 'फसल अवशेष प्रकार, दूरी, मूल्य और मात्रा के आधार पर किसानों और औद्योगिक खरीदारों का सटीक मिलान।',
+      'matches.count': 'उपलब्ध सौदे मिले',
+      'matches.load_demo': 'डेमो डेटा लोड करें',
+      'matches.clear_data': 'डेटा साफ़ करें',
+      'matches.sample_data': 'नमूना डेटा',
+      'matches.filter_residue': 'अवशेष का प्रकार',
+      'matches.filter_state': 'राज्य',
+      'matches.filter_max_price': 'अधिकतम मूल्य / टन (₹)',
+      'matches.sort_by': 'क्रमबद्ध करें',
+      'matches.sort_score': 'सर्वोच्च मैच स्कोर',
+      'matches.sort_distance': 'न्यूनतम दूरी',
+      'matches.sort_price': 'न्यूनतम मूल्य / टन',
+      'matches.all_residues': 'सभी अवशेष',
+      'matches.all_states': 'सभी राज्य',
+      'matches.col_farmer': 'किसान',
+      'matches.col_industry': 'औद्योगिक खरीदार',
+      'matches.col_residue': 'अवशेष',
+      'matches.col_qty': 'मात्रा',
+      'matches.col_distance': 'दूरी',
+      'matches.col_farmer_ask': 'किसान मांग',
+      'matches.col_industry_offer': 'कंपनी प्रस्ताव',
+      'matches.col_gap': 'मूल्य अंतर',
+      'matches.col_score': 'मैच स्कोर',
+      'matches.col_action': 'कार्रवाई',
+      'matches.book_btn': 'सौदा बुक करें',
+      'matches.booked': 'बुक किया गया',
+      'status.pending': 'पुष्टि लंबित',
+      'status.available': 'उपलब्ध',
+      'matches.empty_title': 'कोई मिलान नहीं मिला',
+      'matches.empty_desc': 'वर्तमान में कोई उपयुक्त मिलान उपलब्ध नहीं है। नमूना सौदे देखने के लिए ऊपर "डेमो डेटा लोड करें" पर क्लिक करें।',
+      'matches.score_breakdown_title': 'मैच स्कोर का विवरण',
+      'matches.score_tap_hint': 'अंकों का विवरण देखने के लिए टैप करें',
+      'matches.score_residue': 'अवशेष अनुकूलता',
+      'matches.score_distance': 'भौगोलिक दूरी',
+      'matches.score_price': 'मूल्य अनुकूलता',
+      'matches.score_quantity': 'मात्रा कवरेज',
+      'matches.score_total': 'कुल मैच स्कोर',
+      'matches.modal_title': 'सौदा बुकिंग की पुष्टि',
+      'matches.modal_desc': 'इस किसान और खरीदार के बीच सौदे का प्रस्ताव भेजें। दोनों पक्षों को पुष्टि के लिए सूचित किया जाएगा।',
+      'matches.modal_confirm': 'बुकिंग की पुष्टि करें',
+      'matches.modal_cancel': 'रद्द करें',
+      'matches.booking_success': 'बुकिंग सफलतापूर्वक दर्ज हो गई! स्थिति "पुष्टि लंबित" है।'
     },
 
     // ========================================================================
@@ -354,6 +448,7 @@
       'nav.how_it_works': 'ఎలా పనిచేస్తుంది',
       'nav.farmer_portal': 'రైతు పోర్టల్',
       'nav.industry_portal': 'పరిశ్రమ పోర్టల్',
+      'nav.matches': 'మ్యాచ్‌లు',
       'nav.impact': 'ప్రభావం',
       'nav.select_lang': 'భాష',
 
@@ -485,7 +580,7 @@
       'state.uttar_pradesh': 'ఉత్తరప్రదేశ్ (Uttar Pradesh)',
       'state.andhra_pradesh': 'ఆంధ్రప్రదేశ్ (Andhra Pradesh)',
       'state.telangana': 'తెలంగాణ (Telangana)',
-      'state.karnataka': 'కర్ణాటక (Karnataka)',
+      'state.karnataka': 'కర్ణాటಕ (Karnataka)',
       'state.tamil_nadu': 'తమిళనాడు (Tamil Nadu)',
       'state.kerala': 'కేరళ (Kerala)',
 
@@ -505,7 +600,53 @@
       'error.price_positive': 'దయచేసి 0 కంటే ఎక్కువైన సరైన ధరను నమోదు చేయండి',
       'error.select_option': 'దయచేసి జాబితా నుండి ఒక ఎంపికను ఎంచుకోండి',
       'error.server_unreachable': 'Unable to connect to the server. Please try again later.',
-      'error.general': 'అనుకోని లోపం జరిగింది. దయచేసి మళ్లీ ప్రయత్నించండి.'
+      'error.general': 'అనుకోని లోపం జరిగింది. దయచేసి మళ్లీ ప్రయత్నించండి.',
+
+      // Matches Portal Specific Keys
+      'matches.badge': 'స్మార్ట్ మ్యాచింగ్ ఇంజిన్',
+      'matches.title': 'బయోమాస్ ఒప్పందాలు & మ్యాచ్‌లు',
+      'matches.subtitle': 'వ్యర్థాల రకం, దూరం, ధర మరియు పరిమాణం ఆధారంగా రైతులకు అనువైన పారిశ్రామిక కొనుగోలుదారుల అనుసంధానం.',
+      'matches.count': 'అనువైన ఒప్పందాలు లభించాయి',
+      'matches.load_demo': 'డెమో డేటా లోడ్ చేయండి',
+      'matches.clear_data': 'డేటా తొలగించండి',
+      'matches.sample_data': 'నమూనా డేటా',
+      'matches.filter_residue': 'వ్యర్థాల రకం',
+      'matches.filter_state': 'రాష్ట్రం',
+      'matches.filter_max_price': 'గరిష్ట ధర / టన్నుకు (₹)',
+      'matches.sort_by': 'క్రమబద్ధీకరించండి',
+      'matches.sort_score': 'అత్యధిక మ్యాచ్ స్కోరు',
+      'matches.sort_distance': 'సమీప దూరం',
+      'matches.sort_price': 'తక్కువ ధర / టన్ను',
+      'matches.all_residues': 'అన్ని రకాల వ్యర్థాలు',
+      'matches.all_states': 'అన్ని రాష్ట్రాలు',
+      'matches.col_farmer': 'రైతు',
+      'matches.col_industry': 'పరిశ్రమ కొనుగోలుదారు',
+      'matches.col_residue': 'వ్యర్థం',
+      'matches.col_qty': 'పరిమాణం',
+      'matches.col_distance': 'దూరం',
+      'matches.col_farmer_ask': 'రైతు ఆశించిన ధర',
+      'matches.col_industry_offer': 'కంపెనీ ఆఫర్',
+      'matches.col_gap': 'ధర మార్జిన్',
+      'matches.col_score': 'మ్యాచ్ స్కోరు',
+      'matches.col_action': 'చర్య',
+      'matches.book_btn': 'ఒప్పందం బుక్ చేయండి',
+      'matches.booked': 'బుక్ చేయబడింది',
+      'status.pending': 'నిర్ధారణ పెండింగ్‌లో ఉంది',
+      'status.available': 'అందుబాటులో ఉంది',
+      'matches.empty_title': 'మ్యాచ్‌లు కనుగొనబడలేదు',
+      'matches.empty_desc': 'ప్రస్తుతం అనువైన ఒప్పందాలు ఏవీ లేవు. నమూనా మ్యాచ్‌లను చూడటానికి పైన "డెమో డేటా లోడ్ చేయండి" పై క్లిక్ చేయండి.',
+      'matches.score_breakdown_title': 'మ్యాచ్ స్కోరు వివరాలు',
+      'matches.score_tap_hint': 'పాయింట్ల వివరాలను చూడటానికి నొక్కండి',
+      'matches.score_residue': 'వ్యర్థాల అనుకూలత',
+      'matches.score_distance': 'భౌగోళిక దూరం',
+      'matches.score_price': 'ధర అనుకూలత',
+      'matches.score_quantity': 'పరిమాణ కవరేజ్',
+      'matches.score_total': 'మొత్తం మ్యాచ్ స్కోరు',
+      'matches.modal_title': 'ఒప్పందం బుకింగ్ నిర్ధారణ',
+      'matches.modal_desc': 'ఈ రైతు మరియు పరిశ్రమ మధ్య ఒప్పంద ప్రతిపాదనను పంపండి. ఇరు పక్షాలకు నిర్ధారణ సమాచారం పంపబడుతుంది.',
+      'matches.modal_confirm': 'బుకింగ్ నిర్ధారించండి',
+      'matches.modal_cancel': 'రద్దు చేయండి',
+      'matches.booking_success': 'బుకింగ్ విజయవంతంగా సృష్టించబడింది! స్థితి "నిర్ధారణ పెండింగ్" గా మార్చబడింది.'
     },
 
     // ========================================================================
@@ -518,6 +659,7 @@
       'nav.how_it_works': 'ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ',
       'nav.farmer_portal': 'ರೈತ ಪೋರ್ಟಲ್',
       'nav.industry_portal': 'ಕೈಗಾರಿಕಾ ಪೋರ್ಟಲ್',
+      'nav.matches': 'ಹೊಂದಾಣಿಕೆಗಳು',
       'nav.impact': 'ಪರಿಣಾಮ',
       'nav.select_lang': 'ಭಾಷೆ',
 
@@ -669,7 +811,53 @@
       'error.price_positive': 'ದಯವಿಟ್ಟು ೦ ಕ್ಕಿಂತ ಹೆಚ್ಚಿನ ಮಾನ್ಯ ಬೆಲೆ ನಮೂದಿಸಿ',
       'error.select_option': 'ದಯವಿಟ್ಟು ಪಟ್ಟಿಯಿಂದ ಒಂದು ಆಯ್ಕೆಯನ್ನು ಆರಿಸಿ',
       'error.server_unreachable': 'Unable to connect to the server. Please try again later.',
-      'error.general': 'ಅನಿರೀಕ್ಷಿತ ದೋಷ ಸಂಭವಿಸಿದೆ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.'
+      'error.general': 'ಅನಿರೀಕ್ಷಿತ ದೋಷ ಸಂಭವಿಸಿದೆ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.',
+
+      // Matches Portal Specific Keys
+      'matches.badge': 'ಸ್ಮಾರ್ಟ್ ಮ್ಯಾಚಿಂಗ್ ಇಂಜಿನ್',
+      'matches.title': 'ಬಯೋಮಾಸ್ ಒಪ್ಪಂದಗಳು & ಹೊಂದಾಣಿಕೆಗಳು',
+      'matches.subtitle': 'ಬೆಳೆ ತ್ಯಾಜ್ಯದ ವಿಧ, ದೂರ, ಬೆಲೆ ಹಾಗೂ ಪ್ರಮಾಣದ ಆಧಾರದ ಮೇಲೆ ರೈತರು ಮತ್ತು ಕೈಗಾರಿಕೆಗಳ ನಿಖರ ಹೊಂದಾಣಿಕೆ.',
+      'matches.count': 'ಹೊಂದಾಣಿಕೆಯ ಒಪ್ಪಂದಗಳು ಲಭ್ಯ',
+      'matches.load_demo': 'ಡೆಮೊ ಡೇಟಾ ಲೋಡ್ ಮಾಡಿ',
+      'matches.clear_data': 'ಡೇಟಾ ತೆರವುಗೊಳಿಸಿ',
+      'matches.sample_data': 'ಮಾದರಿ ಡೇಟಾ',
+      'matches.filter_residue': 'ತ್ಯಾಜ್ಯದ ವಿಧ',
+      'matches.filter_state': 'ರಾಜ್ಯ',
+      'matches.filter_max_price': 'ಗರಿಷ್ಠ ಬೆಲೆ / ಟನ್‌ಗೆ (₹)',
+      'matches.sort_by': 'ವಿಂಗಡಿಸಿ',
+      'matches.sort_score': 'ಗರಿಷ್ಠ ಹೊಂದಾಣಿಕೆ ಸ್ಕೋರ್',
+      'matches.sort_distance': 'ಕಡಿಮೆ ದೂರ',
+      'matches.sort_price': 'ಕಡಿಮೆ ಬೆಲೆ / ಟನ್',
+      'matches.all_residues': 'ಎಲ್ಲಾ ತ್ಯಾಜ್ಯಗಳು',
+      'matches.all_states': 'ಎಲ್ಲಾ ರಾಜ್ಯಗಳು',
+      'matches.col_farmer': 'ರೈತ',
+      'matches.col_industry': 'ಕೈಗಾರಿಕಾ ಖರೀದಿದಾರ',
+      'matches.col_residue': 'ತ್ಯಾಜ್ಯ',
+      'matches.col_qty': 'ಪ್ರಮಾಣ',
+      'matches.col_distance': 'ದೂರ',
+      'matches.col_farmer_ask': 'ರೈತರ ನಿರೀಕ್ಷಿತ ಬೆಲೆ',
+      'matches.col_industry_offer': 'ಕಂಪನಿ ಆಫರ್',
+      'matches.col_gap': 'ಬೆಲೆ ಅಂತರ',
+      'matches.col_score': 'ಹೊಂದಾಣಿಕೆ ಸ್ಕೋರ್',
+      'matches.col_action': 'ಕ್ರಮ',
+      'matches.book_btn': 'ಒಪ್ಪಂದ ಬುಕ್ ಮಾಡಿ',
+      'matches.booked': 'ಬುಕ್ ಮಾಡಲಾಗಿದೆ',
+      'status.pending': 'ದೃಢೀಕರಣ ಬಾಕಿ ಇದೆ',
+      'status.available': 'ಲಭ್ಯವಿದೆ',
+      'matches.empty_title': 'ಯಾವುದೇ ಹೊಂದಾಣಿಕೆಗಳು ಕಂಡುಬಂದಿಲ್ಲ',
+      'matches.empty_desc': 'ಪ್ರಸ್ತುತ ಯಾವುದೇ ಹೊಂದಾಣಿಕೆಯ ಒಪ್ಪಂದಗಳು ಲಭ್ಯವಿಲ್ಲ. ಮಾದರಿ ಒಪ್ಪಂದಗಳನ್ನು ವೀಕ್ಷಿಸಲು ಮೇಲೆ "ಡೆಮೊ ಡೇಟಾ ಲೋಡ್ ಮಾಡಿ" ಕ್ಲಿಕ್ ಮಾಡಿ.',
+      'matches.score_breakdown_title': 'ಹೊಂದಾಣಿಕೆ ಸ್ಕೋರ್ ವಿವರ',
+      'matches.score_tap_hint': 'ಅಂಕಗಳ ವಿವರ ನೋಡಲು ಟ್ಯಾಪ್ ಮಾಡಿ',
+      'matches.score_residue': 'ತ್ಯಾಜ್ಯದ ಹೊಂದಾಣಿಕೆ',
+      'matches.score_distance': 'ಭೌಗೋಳಿಕ ಸಾಮೀಪ್ಯ',
+      'matches.score_price': 'ಬೆಲೆಯ ಸ್ಪರ್ಧಾತ್ಮಕತೆ',
+      'matches.score_quantity': 'ಪ್ರಮಾಣದ ವ್ಯಾಪ್ತಿ',
+      'matches.score_total': 'ಒಟ್ಟು ಹೊಂದಾಣಿಕೆ ಸ್ಕೋರ್',
+      'matches.modal_title': 'ಒಪ್ಪಂದ ಬುಕಿಂಗ್ ದೃಢೀಕರಣ',
+      'matches.modal_desc': 'ಈ ರೈತ ಮತ್ತು ಖರೀದಿದಾರರ ನಡುವೆ ಒಪ್ಪಂದದ ಪ್ರಸ್ತಾವನೆಯನ್ನು ಸಲ್ಲಿಸಿ. ದೃಢೀಕರಣಕ್ಕಾಗಿ ಎರಡೂ ಕಡೆಗೆ ಸೂಚಿಸಲಾಗುತ್ತದೆ.',
+      'matches.modal_confirm': 'ಬುಕಿಂಗ್ ದೃಢೀಕರಿಸಿ',
+      'matches.modal_cancel': 'ರದ್ದುಮಾಡಿ',
+      'matches.booking_success': 'ಬುಕಿಂಗ್ ಯಶಸ್ವಿಯಾಗಿ ಸೃಷ್ಟಿಯಾಗಿದೆ! ಸ್ಥಿತಿಯನ್ನು "ದೃಢೀಕರಣ ಬಾಕಿ" ಎಂದು ನಮೂದಿಸಲಾಗಿದೆ.'
     },
 
     // ========================================================================
@@ -682,6 +870,7 @@
       'nav.how_it_works': 'எவ்வாறு செயல்படுகிறது',
       'nav.farmer_portal': 'உழவர் போர்டல்',
       'nav.industry_portal': 'தொழில் போர்டல்',
+      'nav.matches': 'பொருத்தங்கள்',
       'nav.impact': 'தாக்கம்',
       'nav.select_lang': 'மொழி',
 
@@ -833,7 +1022,53 @@
       'error.price_positive': '0 விட அதிகமான சரியான விலையை உள்ளிடவும்',
       'error.select_option': 'பட்டியலில் இருந்து ஒரு விருப்பத்தைத் தேர்ந்தெடுக்கவும்',
       'error.server_unreachable': 'Unable to connect to the server. Please try again later.',
-      'error.general': 'எதிர்பாராத பிழை ஏற்பட்டது. மீண்டும் முயற்சிக்கவும்.'
+      'error.general': 'எதிர்பாராத பிழை ஏற்பட்டது. மீண்டும் முயற்சிக்கவும்.',
+
+      // Matches Portal Specific Keys
+      'matches.badge': 'ஸ்மார்ட் பொருத்த இயந்திரம்',
+      'matches.title': 'பயோமாஸ் ஒப்பந்தங்கள் மற்றும் பொருத்தங்கள்',
+      'matches.subtitle': 'பயிர் கழிவு வகை, தூரம், விலை மற்றும் அளவு அடிப்படையில் விவசாயிகள் மற்றும் தொழில்துறை வாங்குபவர்களின் துல்லியமான இணைப்பு.',
+      'matches.count': 'பொருத்தமான ஒப்பந்தங்கள் கிடைத்தன',
+      'matches.load_demo': 'டெமோ தரவை ஏற்றுக',
+      'matches.clear_data': 'தரவை அழிக்கவும்',
+      'matches.sample_data': 'மாதிரி தரவு',
+      'matches.filter_residue': 'கழிவின் வகை',
+      'matches.filter_state': 'மாநிலம்',
+      'matches.filter_max_price': 'அதிகபட்ச விலை / டன் (₹)',
+      'matches.sort_by': 'வரிசைப்படுத்துக',
+      'matches.sort_score': 'அதிகபட்ச பொருத்தம் மதிப்பெண்',
+      'matches.sort_distance': 'குறைந்த தூரம்',
+      'matches.sort_price': 'குறைந்த விலை / டன்',
+      'matches.all_residues': 'அனைத்து கழிவுகள்',
+      'matches.all_states': 'அனைத்து மாநிலங்கள்',
+      'matches.col_farmer': 'விவசாயி',
+      'matches.col_industry': 'தொழில்துறை வாங்குபவர்',
+      'matches.col_residue': 'கழிவு',
+      'matches.col_qty': 'அளவு',
+      'matches.col_distance': 'தூரம்',
+      'matches.col_farmer_ask': 'விவசாயி கோரிக்கை',
+      'matches.col_industry_offer': 'நிறுவன சலுகை',
+      'matches.col_gap': 'விலை இடைவெளி',
+      'matches.col_score': 'பொருத்த மதிப்பெண்',
+      'matches.col_action': 'செயல்',
+      'matches.book_btn': 'ஒப்பந்தம் பதிவு செய்க',
+      'matches.booked': 'பதிவு செய்யப்பட்டது',
+      'status.pending': 'உறுதிப்படுத்தல் நிலுவையில்',
+      'status.available': 'கிடைக்கக்கூடியது',
+      'matches.empty_title': 'பொருத்தங்கள் ஏதும் கிடைக்கவில்லை',
+      'matches.empty_desc': 'தற்போது பொருத்தமான ஒப்பந்தங்கள் ஏதுமில்லை. மாதிரி ஒப்பந்தங்களைக் காண மேலே உள்ள "டெமோ தரவை ஏற்றுக" பொத்தானைக் கிளிக் செய்யவும்.',
+      'matches.score_breakdown_title': 'பொருத்த மதிப்பெண் விவரம்',
+      'matches.score_tap_hint': 'மதிப்பெண்களைக் காண தட்டவும்',
+      'matches.score_residue': 'கழிவுப் பொருத்தம்',
+      'matches.score_distance': 'புவியியல் தூரம்',
+      'matches.score_price': 'விலை பொருத்தம்',
+      'matches.score_quantity': 'அளவு கவரேஜ்',
+      'matches.score_total': 'மொத்த பொருத்தம் மதிப்பெண்',
+      'matches.modal_title': 'ஒப்பந்த முன்பதிவு உறுதிப்படுத்தல்',
+      'matches.modal_desc': 'இந்த விவசாயி மற்றும் வாங்குபவருக்கு இடையே ஒப்பந்த முன்மொழிவை அனுப்பவும். உறுதிப்படுத்தலுக்கு இரு தரப்பிற்கும் அறிவிக்கப்படும்.',
+      'matches.modal_confirm': 'முன்பதிவை உறுதி செய்க',
+      'matches.modal_cancel': 'ரத்து செய்க',
+      'matches.booking_success': 'முன்பதிவு வெற்றிகரமாக உருவாக்கப்பட்டது! நிலை "உறுதிப்படுத்தல் நிலுவையில்" என அமைக்கப்பட்டது.'
     },
 
     // ========================================================================
@@ -846,6 +1081,7 @@
       'nav.how_it_works': 'പ്രവർത്തനം',
       'nav.farmer_portal': 'കർഷക പോർട്ടൽ',
       'nav.industry_portal': 'വ്യവസായ പോർട്ടൽ',
+      'nav.matches': 'പൊരുത്തങ്ങൾ',
       'nav.impact': 'നേട്ടങ്ങൾ',
       'nav.select_lang': 'ഭാഷ',
 
@@ -997,7 +1233,53 @@
       'error.price_positive': '0-ൽ കൂടുതൽ ഉള്ള സാധുവായ തുക നൽകുക',
       'error.select_option': 'ലിസ്റ്റിൽ നിന്ന് ഒരു ഓപ്ഷൻ തിരഞ്ഞെടുക്കുക',
       'error.server_unreachable': 'Unable to connect to the server. Please try again later.',
-      'error.general': 'അപ്രതീക്ഷിതമായ ഒരു തകരാറുണ്ടായി. ദയവായി വീണ്ടും ശ്രമിക്കുക.'
+      'error.general': 'അപ്രതീക്ഷിതമായ ഒരു തകരാറുണ്ടായി. ദയവായി വീണ്ടും ശ്രമിക്കുക.',
+
+      // Matches Portal Specific Keys
+      'matches.badge': 'സ്മാർട്ട് മാച്ചിംഗ് എഞ്ചിൻ',
+      'matches.title': 'ബയോമാസ് കരാറുകളും പൊരുത്തങ്ങളും',
+      'matches.subtitle': 'വിള അവശിഷ്ട തരം, ദൂരം, വില, അളവ് എന്നിവയെ അടിസ്ഥാനമാക്കി കർഷകരെയും വ്യവസായങ്ങളെയും കൃത്യമായി സംയോജിപ്പിക്കുന്നു.',
+      'matches.count': 'യോജിച്ച കരാറുകൾ കണ്ടെത്തി',
+      'matches.load_demo': 'ഡെമോ ഡാറ്റ ലോഡ് ചെയ്യുക',
+      'matches.clear_data': 'ഡാറ്റ മായ്‌ക്കുക',
+      'matches.sample_data': 'സാമ്പിൾ ഡാറ്റ',
+      'matches.filter_residue': 'അവശിഷ്ടത്തിന്റെ തരം',
+      'matches.filter_state': 'സംസ്ഥാനം',
+      'matches.filter_max_price': 'പരമാവധി വില / ടണ്ണിന് (₹)',
+      'matches.sort_by': 'ക്രമീകരിക്കുക',
+      'matches.sort_score': 'ഉയർന്ന പൊരുത്ത സ്കോർ',
+      'matches.sort_distance': 'കുറഞ്ഞ ദൂരം',
+      'matches.sort_price': 'കുറഞ്ഞ വില / ടൺ',
+      'matches.all_residues': 'എല്ലാ അവശിഷ്ടങ്ങളും',
+      'matches.all_states': 'എല്ലാ സംസ്ഥാനങ്ങളും',
+      'matches.col_farmer': 'കർഷകൻ',
+      'matches.col_industry': 'വ്യവസായ വാങ്ങലുകാരൻ',
+      'matches.col_residue': 'അവശിഷ്ടം',
+      'matches.col_qty': 'അളവ്',
+      'matches.col_distance': 'ദൂരം',
+      'matches.col_farmer_ask': 'കർഷകന്റെ നിരക്ക്',
+      'matches.col_industry_offer': 'കമ്പനി വാഗ്ദാനം',
+      'matches.col_gap': 'വില വ്യത്യാസം',
+      'matches.col_score': 'പൊരുത്ത സ്കോർ',
+      'matches.col_action': 'നടപടി',
+      'matches.book_btn': 'കരാർ ഉറപ്പിക്കുക',
+      'matches.booked': 'ബുക്ക് ചെയ്തു',
+      'status.pending': 'സ്ഥിരീകരണം കാത്തിരിക്കുന്നു',
+      'status.available': 'ലഭ്യമാണ്',
+      'matches.empty_title': 'പൊരുത്തങ്ങളൊന്നും കണ്ടെത്തിയില്ല',
+      'matches.empty_desc': 'നിലവിൽ യോജിച്ച കരാറുകളൊന്നും ലഭ്യമല്ല. സാമ്പിൾ കരാറുകൾ കാണാൻ മുകളിലെ "ഡെമോ ഡാറ്റ ലോഡ് ചെയ്യുക" ക്ലിക്ക് ചെയ്യുക.',
+      'matches.score_breakdown_title': 'സ്കോർ വിശദാംശങ്ങൾ',
+      'matches.score_tap_hint': 'പോയിന്റുകൾ കാണാൻ ടാപ്പ് ചെയ്യുക',
+      'matches.score_residue': 'അവശിഷ്ട അനുയോജ്യത',
+      'matches.score_distance': 'ഭൂമിശാസ്ത്രപരമായ ദൂരം',
+      'matches.score_price': 'വില അനുയോജ്യത',
+      'matches.score_quantity': 'അളവിന്റെ കവറേജ്',
+      'matches.score_total': 'ആകെ പൊരുത്ത സ്കോർ',
+      'matches.modal_title': 'കരാർ ബുക്കിംഗ് സ്ഥിരീകരിക്കുക',
+      'matches.modal_desc': 'ഈ കർഷകനും കമ്പനിക്കും ഇടയിലുള്ള കരാർ നിർദ്ദേശം സമർപ്പിക്കുക. സ്ഥിരീകരണത്തിനായി ഇരുവർക്കും വിവരം ലഭിക്കും.',
+      'matches.modal_confirm': 'ബുക്കിംഗ് സ്ഥിരീകരിക്കുക',
+      'matches.modal_cancel': 'റദ്ദാക്കുക',
+      'matches.booking_success': 'ബുക്കിംഗ് വിജയകരമായി സമർപ്പിച്ചു! നിലവിലെ അവസ്ഥ: സ്ഥിരീകരണം കാത്തിരിക്കുന്നു.'
     }
   };
 
@@ -1009,7 +1291,6 @@
     if (translations[activeLang] && translations[activeLang][key]) {
       return translations[activeLang][key];
     }
-    // Fallback to English
     if (translations[DEFAULT_LANG] && translations[DEFAULT_LANG][key]) {
       return translations[DEFAULT_LANG][key];
     }
@@ -1017,10 +1298,7 @@
   }
 
   /**
-   * Determine initial language:
-   * 1. localStorage preference
-   * 2. Browser language if matched in supported list
-   * 3. Default to 'en'
+   * Determine initial language
    */
   function getInitialLanguage() {
     try {
@@ -1050,19 +1328,16 @@
       currentLanguage = lang;
     }
 
-    // Persist to localStorage
     try {
       localStorage.setItem(STORAGE_KEY, currentLanguage);
     } catch (e) {
       console.warn('AgriLink i18n: Could not write to localStorage', e);
     }
 
-    // Update <html lang="...">
     document.documentElement.lang = currentLanguage;
 
-    // Translate standard text contents
-    const textNodes = document.querySelectorAll('[data-i18n]');
-    textNodes.forEach(node => {
+    // Translate text nodes
+    document.querySelectorAll('[data-i18n]').forEach(node => {
       const key = node.getAttribute('data-i18n');
       const translated = t(key, currentLanguage);
       if (translated) {
@@ -1070,9 +1345,8 @@
       }
     });
 
-    // Translate placeholder attributes
-    const placeholderNodes = document.querySelectorAll('[data-i18n-placeholder]');
-    placeholderNodes.forEach(node => {
+    // Translate placeholders
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(node => {
       const key = node.getAttribute('data-i18n-placeholder');
       const translated = t(key, currentLanguage);
       if (translated) {
@@ -1080,9 +1354,8 @@
       }
     });
 
-    // Translate aria-label attributes
-    const ariaNodes = document.querySelectorAll('[data-i18n-aria-label]');
-    ariaNodes.forEach(node => {
+    // Translate aria-labels
+    document.querySelectorAll('[data-i18n-aria-label]').forEach(node => {
       const key = node.getAttribute('data-i18n-aria-label');
       const translated = t(key, currentLanguage);
       if (translated) {
@@ -1090,9 +1363,8 @@
       }
     });
 
-    // Translate title attributes
-    const titleNodes = document.querySelectorAll('[data-i18n-title]');
-    titleNodes.forEach(node => {
+    // Translate titles
+    document.querySelectorAll('[data-i18n-title]').forEach(node => {
       const key = node.getAttribute('data-i18n-title');
       const translated = t(key, currentLanguage);
       if (translated) {
@@ -1100,37 +1372,29 @@
       }
     });
 
-    // Sync any language select elements in the document
-    const selects = document.querySelectorAll('select.lang-select, #lang-select');
-    selects.forEach(sel => {
+    // Sync language select dropdowns
+    document.querySelectorAll('select.lang-select, #lang-select').forEach(sel => {
       if (sel.value !== currentLanguage) {
         sel.value = currentLanguage;
       }
     });
 
-    // Dispatch event for other custom JS widgets
+    // Dispatch languageChanged event
     window.dispatchEvent(new CustomEvent('agrilink:languageChanged', {
       detail: { language: currentLanguage }
     }));
   }
 
-  /**
-   * Set language programmatically
-   */
   function setLanguage(lang) {
     if (!SUPPORTED_LANGUAGES.includes(lang)) {
-      console.warn(`AgriLink i18n: Unsupported language '${lang}'. Supported: ${SUPPORTED_LANGUAGES.join(', ')}`);
+      console.warn(`AgriLink i18n: Unsupported language '${lang}'`);
       return;
     }
     applyTranslations(lang);
   }
 
-  /**
-   * Bind event listeners to all language selector dropdowns
-   */
   function bindLanguageSelectors() {
-    const selects = document.querySelectorAll('select.lang-select, #lang-select');
-    selects.forEach(select => {
+    document.querySelectorAll('select.lang-select, #lang-select').forEach(select => {
       select.value = currentLanguage;
       select.addEventListener('change', function (e) {
         setLanguage(e.target.value);
@@ -1138,7 +1402,6 @@
     });
   }
 
-  // Initialize once DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
       bindLanguageSelectors();
@@ -1149,7 +1412,6 @@
     applyTranslations(currentLanguage);
   }
 
-  // Expose global API
   window.AgriLinkI18n = {
     t,
     setLanguage,

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AgriLink Matches Portal - Connect compatible farmers with industrial biomass buyers based on residue, distance, and price.">
+  <meta name="theme-color" content="#1B4323">
+  <title>Biomass Deals & Matches - AgriLink</title>
+
+  <!-- Google Fonts: Multi-Script Noto Sans Stack -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Noto+Sans+Kannada:wght@400;500;600;700;800&family=Noto+Sans+Malayalam:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700;800&family=Noto+Sans+Telugu:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header" role="banner">
+    <div class="navbar-container">
+      <a href="index.html" class="brand-link" aria-label="AgriLink Home">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2L15 8L21 9L17 14L18 20L12 17L6 20L7 14L3 9L9 8L12 2Z" opacity="0.3"></path>
+            <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5a5.52 5.52 0 0 0 3 4.88V17c0-2.5 4.5-5 7-5 1.5 0 2.5 1 2.5 2.5 0 2-2.5 3.5-5 3.5"></path>
+          </svg>
+        </div>
+        <div class="brand-text-group">
+          <span class="brand-title" data-i18n="nav.brand">AgriLink</span>
+          <span class="brand-subtitle" data-i18n="nav.tagline_short">From Smoke to Sustainability</span>
+        </div>
+      </a>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <div class="lang-selector-wrap" title="Change Language">
+          <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <select id="lang-select" class="lang-select" aria-label="Select Language" data-i18n-aria-label="nav.select_lang">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+            <option value="te">తెలుగు</option>
+            <option value="kn">ಕನ್ನಡ</option>
+            <option value="ta">தமிழ்</option>
+            <option value="ml">മലയാളം</option>
+          </select>
+          <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+
+      <div class="nav-overlay" aria-hidden="true"></div>
+
+      <!-- Navigation Menu -->
+      <nav id="primary-nav" class="nav-menu" role="navigation" aria-label="Main menu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="farmer.html" class="nav-link" data-i18n="nav.farmer_portal">Farmer Portal</a>
+          </li>
+          <li class="nav-item">
+            <a href="industry.html" class="nav-link" data-i18n="nav.industry_portal">Industry Portal</a>
+          </li>
+          <li class="nav-item">
+            <a href="matches.html" class="nav-link nav-link-portal active" data-i18n="nav.matches">Matches</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#impact" class="nav-link" data-i18n="nav.impact">Impact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Matches Content -->
+  <main class="container">
+    
+    <!-- Page Header -->
+    <div class="portal-page-header">
+      <div class="portal-hero-badge farmer">
+        <span>⚡</span>
+        <span data-i18n="matches.badge">Smart Matching Engine</span>
+      </div>
+      <h1 class="portal-page-title" data-i18n="matches.title">Biomass Deals & Matches</h1>
+      <p class="portal-page-desc" data-i18n="matches.subtitle">
+        Compatible farmer residue listings matched with industrial buyers based on residue type, distance, price, and volume.
+      </p>
+    </div>
+
+    <!-- Controls Bar: Actions & Filters -->
+    <div class="matches-controls-bar">
+      
+      <!-- Top Action Row -->
+      <div class="matches-actions-row">
+        <div class="matches-count-label">
+          <span>🔍</span>
+          <span id="matches-count-badge" data-i18n="matches.count">Compatible Deals Found</span>
+        </div>
+
+        <div class="matches-btn-group">
+          <!-- Load Demo Data Button -->
+          <button id="btn-load-demo" class="btn-action primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span data-i18n="matches.load_demo">Load Demo Data</span>
+          </button>
+
+          <!-- Clear Data Button -->
+          <button id="btn-clear-data" class="btn-action danger">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="3 6 5 6 21 6"></polyline>
+              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+            </svg>
+            <span data-i18n="matches.clear_data">Clear Data</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Filters & Sorting Grid -->
+      <div class="matches-filters-grid">
+        
+        <!-- Filter: Residue Type -->
+        <div class="filter-item">
+          <label for="filter-residue" class="filter-label" data-i18n="matches.filter_residue">Residue Type</label>
+          <select id="filter-residue" class="filter-control">
+            <option value="" data-i18n="matches.all_residues">All Residues</option>
+            <option value="paddy_straw" data-i18n="residue.paddy_straw">Paddy Straw</option>
+            <option value="wheat_straw" data-i18n="residue.wheat_straw">Wheat Straw</option>
+            <option value="sugarcane_bagasse" data-i18n="residue.sugarcane_bagasse">Sugarcane Bagasse</option>
+            <option value="maize_stalk" data-i18n="residue.maize_stalk">Maize Stalk</option>
+            <option value="cotton_stalk" data-i18n="residue.cotton_stalk">Cotton Stalk</option>
+          </select>
+        </div>
+
+        <!-- Filter: State -->
+        <div class="filter-item">
+          <label for="filter-state" class="filter-label" data-i18n="matches.filter_state">State</label>
+          <select id="filter-state" class="filter-control">
+            <option value="" data-i18n="matches.all_states">All States</option>
+          </select>
+        </div>
+
+        <!-- Filter: Max Price -->
+        <div class="filter-item">
+          <label for="filter-max-price" class="filter-label" data-i18n="matches.filter_max_price">Max Price / Ton (₹)</label>
+          <input type="number" id="filter-max-price" class="filter-control" placeholder="e.g. 2500" min="500" step="100">
+        </div>
+
+        <!-- Sorting -->
+        <div class="filter-item">
+          <label for="sort-matches" class="filter-label" data-i18n="matches.sort_by">Sort By</label>
+          <select id="sort-matches" class="filter-control">
+            <option value="score" data-i18n="matches.sort_score">Highest Match Score</option>
+            <option value="distance" data-i18n="matches.sort_distance">Shortest Distance</option>
+            <option value="price" data-i18n="matches.sort_price">Lowest Price / Ton</option>
+          </select>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Empty State (Shown initially when no matches or data exist) -->
+    <div id="matches-empty-state" class="matches-empty-state">
+      <div class="empty-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </div>
+      <h3 class="empty-title" data-i18n="matches.empty_title">No Matches Found</h3>
+      <p class="empty-desc" data-i18n="matches.empty_desc">
+        No compatible matches available yet. Click "Load demo data" above to explore sample deals, or register via the Farmer and Industry portals.
+      </p>
+    </div>
+
+    <!-- Content Wrap (Holds Table for Desktop & Cards for Mobile) -->
+    <div id="matches-content-wrap" style="display: none;">
+      
+      <!-- Desktop Table -->
+      <div class="matches-table-wrap">
+        <table class="matches-table" aria-label="Biomass Matches Table">
+          <thead>
+            <tr>
+              <th data-i18n="matches.col_farmer">Farmer</th>
+              <th data-i18n="matches.col_industry">Industry Buyer</th>
+              <th data-i18n="matches.col_residue">Residue</th>
+              <th data-i18n="matches.col_qty">Quantity</th>
+              <th data-i18n="matches.col_distance">Distance</th>
+              <th data-i18n="matches.col_farmer_ask">Farmer Ask</th>
+              <th data-i18n="matches.col_industry_offer">Industry Offer</th>
+              <th data-i18n="matches.col_gap">Price Margin</th>
+              <th data-i18n="matches.col_score">Match Score</th>
+              <th data-i18n="matches.col_action">Action</th>
+            </tr>
+          </thead>
+          <tbody id="matches-table-body">
+            <!-- Dynamically populated -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Match Cards -->
+      <div id="matches-cards-list" class="matches-cards-list">
+        <!-- Dynamically populated -->
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Score Breakdown Modal -->
+  <div id="score-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="score-modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="score-modal-title" class="modal-title" data-i18n="matches.score_breakdown_title">Match Score Breakdown</h3>
+        <button id="btn-close-score-modal" class="btn-modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div id="score-breakdown-content">
+        <!-- Populated via js/matches.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Booking Confirmation Modal -->
+  <div id="booking-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="booking-modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="booking-modal-title" class="modal-title" data-i18n="matches.modal_title">Confirm Biomass Booking</h3>
+        <button id="btn-close-booking-modal" class="btn-modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:1rem;" data-i18n="matches.modal_desc">
+        Submit a deal proposal between this farmer and industry buyer. Both parties will be notified for confirmation.
+      </p>
+      <div id="booking-summary" class="modal-summary-grid">
+        <!-- Populated via js/matches.js -->
+      </div>
+      <div class="modal-actions">
+        <button id="btn-cancel-booking" class="btn-action" data-i18n="matches.modal_cancel">Cancel</button>
+        <button id="btn-confirm-booking" class="btn-action primary" data-i18n="matches.modal_confirm">Confirm Booking</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding-top: 0;">
+        <p>&copy; 2026 AgriLink. <span data-i18n="footer.rights">All rights reserved. Transforming agricultural smoke into sustainable energy.</span></p>
+        <p><a href="index.html" style="color: #fff; text-decoration: underline;" data-i18n="nav.home">Home</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/matches.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
