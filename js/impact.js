@@ -258,7 +258,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (valBrokerage) valBrokerage.textContent = `₹${formatINR(brokerageCommission)}`;
 
     // 4. Render Government View (Computed Numbers & District Names)
-    const sortedDistricts = (districts || []).filter(d => typeof d === 'string' && d.trim()).sort();
+    const capitalize = window.AgriLinkAPI && window.AgriLinkAPI.formatPlace ? window.AgriLinkAPI.formatPlace : (s => s);
+    const sortedDistricts = (districts || [])
+      .map(d => capitalize(d))
+      .filter(d => typeof d === 'string' && d.trim())
+      .sort();
     if (valGovtResidue) valGovtResidue.textContent = formatTons(totalResidueDivertedTons);
     if (valGovtCo2) valGovtCo2.textContent = formatTons(co2AvoidedTonnes);
     if (valGovtDistricts) valGovtDistricts.textContent = sortedDistricts.length.toString();
@@ -481,6 +485,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     updateImpactDashboard();
   });
+
+  // Re-render when data changes (e.g., demo loaded or cleared)
+  window.addEventListener('agrilink:dataChanged', () => {
+    updateImpactDashboard();
+  });
+
+  // Demo Controls
+  const btnDemoMode = document.getElementById('btn-demo-mode');
+  const btnResetDemo = document.getElementById('btn-reset-demo');
+
+  if (btnDemoMode) {
+    btnDemoMode.addEventListener('click', () => {
+      if (window.AgriLinkAPI) {
+        window.AgriLinkAPI.loadDemoData();
+        updateImpactDashboard();
+        if (typeof window.agriLinkToast === 'function') {
+          window.agriLinkToast(t('demo.loaded_success'));
+        }
+      }
+    });
+  }
+
+  if (btnResetDemo) {
+    btnResetDemo.addEventListener('click', () => {
+      if (window.AgriLinkAPI) {
+        window.AgriLinkAPI.clearDemoData();
+        updateImpactDashboard();
+        if (typeof window.agriLinkToast === 'function') {
+          window.agriLinkToast(t('demo.reset_success'));
+        }
+      }
+    });
+  }
 
   // Initial Execution
   setMode('booked');

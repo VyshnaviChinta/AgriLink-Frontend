@@ -2447,3 +2447,675 @@ select.form-control:disabled {
     padding: 4.5rem 0 5.5rem;
   }
 }
+
+
+/* --------------------------------------------------------------------------
+   12. Smart Collection Network (Clusters) Styles
+   -------------------------------------------------------------------------- */
+.why-cluster-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: linear-gradient(135deg, #ECFDF5 0%, #F0FDF4 100%);
+  border: 1.5px solid #A7F3D0;
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.75rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.why-cluster-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.why-cluster-body {
+  flex: 1;
+}
+
+.why-cluster-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--green-900);
+  margin-bottom: 0.25rem;
+}
+
+.why-cluster-text {
+  font-size: 0.92rem;
+  color: var(--green-800);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.unclustered-alert {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #FEF3C7;
+  border: 1.5px solid #F59E0B;
+  color: #92400E;
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1.75rem;
+}
+
+.unclustered-icon {
+  font-size: 1.2rem;
+}
+
+.clusters-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 900px) {
+  .clusters-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.cluster-card {
+  background: var(--bg-surface);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.cluster-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--green-600);
+}
+
+.cluster-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.cluster-header-main {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.cluster-volume-badge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  background: var(--green-50);
+  border: 1px solid var(--green-300);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-pill);
+  color: var(--green-900);
+}
+
+.cluster-volume-badge strong {
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.cluster-volume-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.cluster-trucks-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  color: #1D4ED8;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.cluster-hub-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: linear-gradient(135deg, var(--green-50), #F0FDF4);
+  border: 1.5px dashed var(--green-600);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+}
+
+.hub-icon-wrap {
+  font-size: 1.4rem;
+}
+
+.hub-info-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.hub-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.hub-location {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--green-900);
+}
+
+.hub-details {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.cluster-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.65rem;
+}
+
+.members-count-badge {
+  background: var(--earth-100);
+  color: var(--earth-800);
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  padding: 0.1rem 0.5rem;
+  font-weight: 700;
+}
+
+.cluster-member-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cluster-member-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 0.85rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cluster-member-item.is-hub {
+  background: #F0FDF4;
+  border-color: #86EFAC;
+}
+
+.member-primary {
+  display: flex;
+  flex-direction: column;
+}
+
+.member-name {
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.member-location {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.member-stats {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.member-tons {
+  font-weight: 700;
+  color: var(--green-900);
+}
+
+.member-price {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.member-dist-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-pill);
+  background: var(--earth-100);
+  color: var(--earth-800);
+  border: 1px solid var(--earth-200);
+}
+
+.member-dist-badge.hub {
+  background: #DCFCE7;
+  color: #166534;
+  border-color: #86EFAC;
+}
+
+.cluster-industry-section {
+  margin-top: auto;
+  border-top: 1px solid var(--border-light);
+  padding-top: 0.85rem;
+}
+
+.cluster-industry-card {
+  background: #FAFAFA;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+}
+
+.cluster-ind-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.cluster-ind-name {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--green-900);
+  margin: 0;
+}
+
+.cluster-ind-type {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.cluster-ind-dist-badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-pill);
+  background: #E0F2FE;
+  color: #0369A1;
+  border: 1px solid #BAE6FD;
+}
+
+.cluster-ind-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  margin-bottom: 0.65rem;
+}
+
+.ind-offer-price {
+  font-weight: 800;
+  color: var(--green-800);
+}
+
+.cluster-demand-coverage {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.coverage-chip {
+  display: inline-flex;
+  align-items: center;
+  background: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #F59E0B;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.coverage-sub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.cluster-no-industry {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #FEF2F2;
+  border: 1px solid #FCA5A5;
+  color: #991B1B;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+}
+
+/* --------------------------------------------------------------------------
+   13. Universal Demo Controls & Toast
+   -------------------------------------------------------------------------- */
+.demo-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-surface);
+  border: 1.5px dashed var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.5rem;
+  margin: 3rem 0;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.demo-controls-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.demo-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.agrilink-toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--green-900);
+  color: #ffffff;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.92rem;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 9999;
+}
+
+.agrilink-toast.visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* --------------------------------------------------------------------------
+   14. Roadmap & Coming Soon Section (index.html)
+   -------------------------------------------------------------------------- */
+.roadmap-section {
+  padding: 4rem 0 3rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.roadmap-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+}
+
+.roadmap-badge {
+  display: inline-block;
+  background: #E0E7FF;
+  color: #3730A3;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.roadmap-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--green-900);
+  margin-bottom: 0.5rem;
+}
+
+.roadmap-subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.roadmap-card {
+  background: #F9FAFB;
+  border: 1.5px dashed #D1D5DB;
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  opacity: 0.85;
+  transition: all var(--transition-fast);
+}
+
+.roadmap-card:hover {
+  opacity: 1;
+  border-color: var(--green-600);
+  background: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+
+.roadmap-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.roadmap-card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.roadmap-card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.roadmap-card-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* --------------------------------------------------------------------------
+   15. Policy & Support Card (farmer.html)
+   -------------------------------------------------------------------------- */
+.policy-card {
+  background: linear-gradient(135deg, #F0FDF4 0%, #ECFDF5 100%);
+  border: 1.5px solid #86EFAC;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  box-shadow: var(--shadow-sm);
+}
+
+.policy-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.policy-content {
+  flex: 1;
+}
+
+.policy-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--green-900);
+  margin-bottom: 0.35rem;
+}
+
+.policy-desc {
+  font-size: 0.92rem;
+  color: var(--green-800);
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.policy-note {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--earth-700);
+  font-style: italic;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   16. Logistics & Deal Panel in Booking Modal (matches.html)
+   -------------------------------------------------------------------------- */
+.logistics-panel {
+  background: var(--bg-alt);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-top: 1rem;
+}
+
+.logistics-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--green-900);
+  margin-bottom: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logistics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.logistics-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.logistics-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.logistics-val {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.logistics-date-input {
+  padding: 0.45rem 0.65rem;
+  border: 1.5px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+
+.logistics-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.25rem 0 0.85rem;
+  position: relative;
+}
+
+.logistics-stepper::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: var(--border-medium);
+  z-index: 1;
+}
+
+.logistics-step {
+  position: relative;
+  z-index: 2;
+  background: var(--bg-surface);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-pill);
+  padding: 0.35rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.logistics-step.active {
+  background: var(--green-700);
+  color: #ffffff;
+  border-color: var(--green-800);
+  box-shadow: 0 0 0 3px rgba(45, 106, 53, 0.2);
+}
+
+.logistics-step.completed {
+  background: #DCFCE7;
+  color: #166534;
+  border-color: #86EFAC;
+}
+
+.mock-payment-card {
+  background: #FEF3C7;
+  border: 1.5px dashed #F59E0B;
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+  margin-top: 1rem;
+}
+
+.mock-payment-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 800;
+  color: #92400E;
+  font-size: 0.92rem;
+  margin-bottom: 0.25rem;
+}
+
+.mock-payment-note {
+  font-size: 0.8rem;
+  color: #78350F;
+  margin: 0;
+}

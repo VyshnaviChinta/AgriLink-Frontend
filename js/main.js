@@ -68,4 +68,53 @@ document.addEventListener('DOMContentLoaded', () => {
       siteHeader.classList.remove('scrolled');
     }
   }, { passive: true });
+
+  // Global Toast function
+  function showToast(message) {
+    let toast = document.getElementById('agrilink-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'agrilink-toast';
+      toast.className = 'agrilink-toast';
+      document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.classList.add('visible');
+    setTimeout(() => {
+      toast.classList.remove('visible');
+    }, 3200);
+  }
+  window.agriLinkToast = showToast;
+
+  // Global Demo Mode & Reset Demo Controls (for index, farmer, industry, etc.)
+  const btnDemoMode = document.getElementById('btn-demo-mode');
+  const btnResetDemo = document.getElementById('btn-reset-demo');
+  const t = window.AgriLinkI18n ? window.AgriLinkI18n.t : (k => k);
+
+  // Note: matches.js, impact.js, and clusters.js attach their own handlers to also re-render their data
+  // Only attach fallback handlers here if not already handled by page controllers
+  const pageHasDedicatedController = document.getElementById('matches-table-body') || 
+                                     document.getElementById('chart-farmer-earnings') || 
+                                     document.getElementById('clusters-list');
+
+  if (!pageHasDedicatedController) {
+    if (btnDemoMode) {
+      btnDemoMode.addEventListener('click', () => {
+        if (window.AgriLinkAPI) {
+          window.AgriLinkAPI.loadDemoData();
+          showToast(t('demo.loaded_success'));
+        }
+      });
+    }
+
+    if (btnResetDemo) {
+      btnResetDemo.addEventListener('click', () => {
+        if (window.AgriLinkAPI) {
+          window.AgriLinkAPI.clearDemoData();
+          showToast(t('demo.reset_success'));
+        }
+      });
+    }
+  }
 });
+

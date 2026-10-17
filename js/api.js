@@ -16,6 +16,8 @@
 const MOCK_MODE = true; // Set to false to connect to real backend server
 const API_BASE = 'http://localhost:8000';
 const CLUSTER_RADIUS_KM = 50; // Radial distance (km) from pickup hub for farmer clusters
+const TONS_PER_TRUCK = 10; // Nominal capacity per truck in metric tons
+const MAX_BUYER_DISTANCE_KM = 300; // Maximum distance (km) from pickup hub for industrial buyers
 
 /**
  * Helper: Capitalize place names (Village, District, State)
@@ -606,7 +608,7 @@ function clearAllData() {
  * Compute Smart Collection Network (Biomass Farmer Aggregation Clusters)
  * Radial rule: A farmer joins a cluster only if within radiusKm of the pickup hub.
  */
-function computeClusters(radiusKm = CLUSTER_RADIUS_KM) {
+function computeClusters(radiusKm = CLUSTER_RADIUS_KM, maxBuyerDistanceKm = MAX_BUYER_DISTANCE_KM) {
   const farmers = JSON.parse(
     localStorage.getItem('agrilink_farmer_submissions') || '[]'
   );
@@ -677,30 +679,57 @@ function computeClusters(radiusKm = CLUSTER_RADIUS_KM) {
       if (clusterMembers.length >= 2) {
         let totalTons = 0;
         let weightedPriceSum = 0;
+        let maxFarmerAsk = 0;
         clusterMembers.forEach(m => {
           const q = parseFloat(m.quantity_tons) || 0;
+          const p = parseFloat(m.price_per_ton) || 0;
           totalTons += q;
-          weightedPriceSum += q * (parseFloat(m.price_per_ton) || 0);
+          weightedPriceSum += q * p;
+          if (p > maxFarmerAsk) maxFarmerAsk = p;
         });
         const avgPrice = totalTons > 0 ? Math.round(weightedPriceSum / totalTons) : 0;
+        const trucksCount = Math.ceil(totalTons / TONS_PER_TRUCK);
 
-        // Find best-matching industry for the combined quantity
+        // Find best-matching industry: ONLY consider industries within maxBuyerDistanceKm
+        // whose offered price >= highest farmer ask, and residue matches (or "any")
         let bestIndustry = null;
         let bestScore = -1;
+        let bestDist = Infinity;
 
         industries.forEach(ind => {
           const isResidueMatch = ind.residue_type === 'any' || ind.residue_type === residueType;
           if (!isResidueMatch) return;
 
-          const distToHub = calculateDistanceKm(hubDistrict, ind.district);
-          const priceCompatible = (ind.price_per_ton || 0) >= avgPrice;
-          const distScore = Math.max(0, 500 - distToHub);
-          const priceBonus = priceCompatible ? 500 : 0;
-          const score = distScore + priceBonus;
+          const indPrice = parseFloat(ind.price_per_ton) || 0;
+          if (indPrice < maxFarmerAsk) return;
 
-          if (score > bestScore) {
-            bestScore = score;
-            const indDemand = parseFloat(ind.quantity_tons) || 0;
+          const distToHub = calculateDistanceKm(hubDistrict, ind.district);
+          if (distToHub > maxBuyerDistanceKm) return;
+
+          // Standard 100-point matching score
+          const residueScore = ind.residue_type === residueType ? 30 : 28;
+          const distanceScore = Math.max(0, Math.min(30, Math.round(30 * (1 - Math.min(distToHub, 500) / 500))));
+          const priceGap = Math.max(0, indPrice - maxFarmerAsk);
+          const priceRatio = indPrice > 0 ? priceGap / indPrice : 0;
+          const priceBonus = Math.min(10, Math.round(10 * Math.min(1.0, priceRatio / 0.25)));
+          const priceScore = Math.min(25, 15 + priceBonus);
+
+          const indDemand = parseFloat(ind.quantity_tons) || 0;
+          const qtyRatio = indDemand > 0 ? Math.min(1.0, totalTons / indDemand) : 1.0;
+          const quantityScore = Math.max(5, Math.min(15, Math.round(15 * qtyRatio)));
+
+          const totalScore = residueScore + distanceScore + priceScore + quantityScore;
+
+          let isBetter = false;
+          if (totalScore > bestScore) {
+            isBetter = true;
+          } else if (totalScore === bestScore && distToHub < bestDist) {
+            isBetter = true;
+          }
+
+          if (isBetter) {
+            bestScore = totalScore;
+            bestDist = distToHub;
             const coveragePct = indDemand > 0 ? Math.min(100, Math.round((totalTons / indDemand) * 100)) : 100;
             const isPartial = indDemand > 0 && totalTons < indDemand;
 
@@ -712,10 +741,11 @@ function computeClusters(radiusKm = CLUSTER_RADIUS_KM) {
               state: formatPlace(ind.state),
               demand_tons: indDemand,
               distance_km: distToHub,
-              offered_price: ind.price_per_ton,
+              offered_price: indPrice,
+              score: totalScore,
               coverage_percent: coveragePct,
               is_partial: isPartial,
-              price_compatible: priceCompatible
+              price_compatible: true
             };
           }
         });
@@ -724,17 +754,24 @@ function computeClusters(radiusKm = CLUSTER_RADIUS_KM) {
           id: `cluster_${residueType}_${clusterIndex++}`,
           residue_type: residueType,
           total_tons: Math.round(totalTons * 10) / 10,
+          estimated_trucks: trucksCount,
           member_count: clusterMembers.length,
           members: clusterMembers,
           pickup_hub_district: formatPlace(hubDistrict),
           pickup_hub_farmer: formatPlace(hubFarmer.name),
           pickup_hub_village: formatPlace(hubFarmer.village),
           avg_price: avgPrice,
+          max_farmer_ask: maxFarmerAsk,
           best_industry: bestIndustry
         });
       }
     }
   });
+
+  const clusteredCount = clusters.reduce((acc, c) => acc + c.member_count, 0);
+  const unclusteredCount = Math.max(0, farmers.length - clusteredCount);
+  clusters.unclustered_count = unclusteredCount;
+  clusters.total_farmers = farmers.length;
 
   return clusters;
 }
@@ -1136,6 +1173,8 @@ window.AgriLinkAPI = {
   API_BASE,
   MOCK_MODE,
   CLUSTER_RADIUS_KM,
+  TONS_PER_TRUCK,
+  MAX_BUYER_DISTANCE_KM,
   addFarmer,
   addIndustry,
   getMatches,

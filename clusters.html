@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AgriLink Smart Collection Network - Grouping small farmers within 50 km to pool residue volume and fulfill industrial minimum demand.">
+  <meta name="theme-color" content="#1B4323">
+  <title>Smart Collection Network - AgriLink</title>
+
+  <!-- Google Fonts: Multi-Script Noto Sans Stack -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Noto+Sans+Kannada:wght@400;500;600;700;800&family=Noto+Sans+Malayalam:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700;800&family=Noto+Sans+Telugu:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header" role="banner">
+    <div class="navbar-container">
+      <a href="index.html" class="brand-link" aria-label="AgriLink Home">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2L15 8L21 9L17 14L18 20L12 17L6 20L7 14L3 9L9 8L12 2Z" opacity="0.3"></path>
+            <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5a5.52 5.52 0 0 0 3 4.88V17c0-2.5 4.5-5 7-5 1.5 0 2.5 1 2.5 2.5 0 2-2.5 3.5-5 3.5"></path>
+          </svg>
+        </div>
+        <div class="brand-text-group">
+          <span class="brand-title" data-i18n="nav.brand">AgriLink</span>
+          <span class="brand-subtitle" data-i18n="nav.tagline_short">From Smoke to Sustainability</span>
+        </div>
+      </a>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <div class="lang-selector-wrap" title="Change Language">
+          <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <select id="lang-select" class="lang-select" aria-label="Select Language" data-i18n-aria-label="nav.select_lang">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+            <option value="te">తెలుగు</option>
+            <option value="kn">ಕನ್ನಡ</option>
+            <option value="ta">தமிழ்</option>
+            <option value="ml">മലയാളം</option>
+          </select>
+          <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+
+      <div class="nav-overlay" aria-hidden="true"></div>
+
+      <!-- Navigation Menu -->
+      <nav id="primary-nav" class="nav-menu" role="navigation" aria-label="Main menu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="farmer.html" class="nav-link" data-i18n="nav.farmer_portal">Farmer Portal</a>
+          </li>
+          <li class="nav-item">
+            <a href="industry.html" class="nav-link" data-i18n="nav.industry_portal">Industry Portal</a>
+          </li>
+          <li class="nav-item">
+            <a href="matches.html" class="nav-link nav-link-portal" data-i18n="nav.matches">Matches</a>
+          </li>
+          <li class="nav-item">
+            <a href="clusters.html" class="nav-link nav-link-portal active" data-i18n="nav.clusters">Clusters</a>
+          </li>
+          <li class="nav-item">
+            <a href="impact.html" class="nav-link nav-link-portal" data-i18n="nav.impact">Impact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Clusters Content -->
+  <main class="container">
+    
+    <!-- Page Header -->
+    <div class="portal-page-header">
+      <div class="portal-hero-badge farmer">
+        <span>📍</span>
+        <span data-i18n="clusters.badge">Smart Collection Network</span>
+      </div>
+      <h1 class="portal-page-title" data-i18n="clusters.title">Biomass Aggregation Clusters</h1>
+      <p class="portal-page-desc" data-i18n="clusters.subtitle">
+        Grouping farmers within 50 km into collective pickup hubs to meet industrial orders efficiently.
+      </p>
+    </div>
+
+    <!-- Why Cluster Callout -->
+    <div class="why-cluster-card">
+      <div class="why-cluster-icon">💡</div>
+      <div class="why-cluster-body">
+        <h3 class="why-cluster-title" data-i18n="clusters.why_title">Why Cluster?</h3>
+        <p class="why-cluster-text" data-i18n="clusters.why_desc">Small farmers combine quantity to meet an industry's minimum order.</p>
+      </div>
+    </div>
+
+    <!-- Unclustered Farmers Notice -->
+    <div id="unclustered-notice" class="unclustered-alert" style="display: none;">
+      <span class="unclustered-icon">ℹ️</span>
+      <span id="unclustered-notice-text"></span>
+    </div>
+
+    <!-- Cluster Cards Container -->
+    <div id="clusters-content-wrap">
+      <div id="clusters-list" class="clusters-grid">
+        <!-- Rendered by js/clusters.js -->
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <div id="clusters-empty-state" class="empty-state-card" style="display: none;">
+      <div class="empty-state-icon">🚜</div>
+      <h3 class="empty-state-title" data-i18n="clusters.empty_title">No Farmer Clusters Formed Yet</h3>
+      <p class="empty-state-desc" data-i18n="clusters.empty_desc">
+        Clusters require at least two farmers with the same residue type within 50 km. Load demo data to view a sample cluster.
+      </p>
+      <button id="btn-cluster-load-demo" class="btn btn-primary">
+        <span>⚡</span>
+        <span data-i18n="clusters.empty_btn">Load Demo Data</span>
+      </button>
+    </div>
+
+    <!-- Demo Action Controls Bar -->
+    <div class="demo-controls-bar">
+      <span class="demo-controls-label" data-i18n="demo.load_btn">Demo Mode</span>
+      <div class="demo-btn-group">
+        <button id="btn-demo-mode" class="btn btn-secondary btn-sm">
+          <span>⚡</span>
+          <span data-i18n="demo.load_btn">Demo mode</span>
+        </button>
+        <button id="btn-reset-demo" class="btn btn-outline btn-sm">
+          <span>↺</span>
+          <span data-i18n="demo.reset_btn">Reset demo</span>
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding-top: 0;">
+        <p>&copy; 2026 AgriLink. <span data-i18n="footer.rights">All rights reserved. Transforming agricultural smoke into sustainable energy.</span></p>
+        <p><a href="index.html" style="color: #fff; text-decoration: underline;" data-i18n="nav.home">Home</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/clusters.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

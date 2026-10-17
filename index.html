@@ -92,6 +92,9 @@
           <li class="nav-item">
             <a href="matches.html" class="nav-link nav-link-portal" data-i18n="nav.matches">Matches</a>
           </li>
+          <li class="nav-item">
+            <a href="clusters.html" class="nav-link nav-link-portal" data-i18n="nav.clusters">Clusters</a>
+          </li>
         </ul>
       </nav>
 
@@ -390,6 +393,94 @@
         </div>
       </div>
     </section>
+    <!-- =========================================================================
+         Section 4: Roadmap & Upcoming Features
+         ========================================================================= -->
+    <section class="roadmap-section" aria-labelledby="roadmap-title">
+      <div class="container">
+        <div class="roadmap-header">
+          <span class="roadmap-badge" data-i18n="coming_soon.badge">Coming soon</span>
+          <h2 id="roadmap-title" class="roadmap-title" data-i18n="coming_soon.title">Platform Roadmap & Upcoming Features</h2>
+          <p class="roadmap-subtitle" data-i18n="coming_soon.subtitle">
+            Tools under active development to make residue trade smoother, faster, and accessible to every village.
+          </p>
+        </div>
+
+        <div class="roadmap-grid">
+          <div class="roadmap-card">
+            <span class="roadmap-icon">📱</span>
+            <div class="roadmap-card-body">
+              <span class="roadmap-card-title" data-i18n="coming_soon.otp_login">Phone OTP login</span>
+              <span class="roadmap-card-tag" data-i18n="coming_soon.badge">Coming soon</span>
+            </div>
+          </div>
+
+          <div class="roadmap-card">
+            <span class="roadmap-icon">💳</span>
+            <div class="roadmap-card-body">
+              <span class="roadmap-card-title" data-i18n="coming_soon.upi_payment">UPI payment</span>
+              <span class="roadmap-card-tag" data-i18n="coming_soon.badge">Coming soon</span>
+            </div>
+          </div>
+
+          <div class="roadmap-card">
+            <span class="roadmap-icon">💬</span>
+            <div class="roadmap-card-body">
+              <span class="roadmap-card-title" data-i18n="coming_soon.alerts">SMS & WhatsApp alerts</span>
+              <span class="roadmap-card-tag" data-i18n="coming_soon.badge">Coming soon</span>
+            </div>
+          </div>
+
+          <div class="roadmap-card">
+            <span class="roadmap-icon">🤝</span>
+            <div class="roadmap-card-body">
+              <span class="roadmap-card-title" data-i18n="coming_soon.negotiation">Price negotiation</span>
+              <span class="roadmap-card-tag" data-i18n="coming_soon.badge">Coming soon</span>
+            </div>
+          </div>
+
+          <div class="roadmap-card">
+            <span class="roadmap-icon">🗺️</span>
+            <div class="roadmap-card-body">
+              <span class="roadmap-card-title" data-i18n="coming_soon.map_view">Map view</span>
+              <span class="roadmap-card-tag" data-i18n="coming_soon.badge">Coming soon</span>
+            </div>
+          </div>
+
+          <div class="roadmap-card">
+            <span class="roadmap-icon">🎙️</span>
+            <div class="roadmap-card-body">
+              <span class="roadmap-card-title" data-i18n="coming_soon.voice_input">Voice input</span>
+              <span class="roadmap-card-tag" data-i18n="coming_soon.badge">Coming soon</span>
+            </div>
+          </div>
+
+          <div class="roadmap-card">
+            <span class="roadmap-icon">🏷️</span>
+            <div class="roadmap-card-body">
+              <span class="roadmap-card-title" data-i18n="coming_soon.quality_grades">Quality grades</span>
+              <span class="roadmap-card-tag" data-i18n="coming_soon.badge">Coming soon</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Demo Mode Controls Bar -->
+        <div class="demo-controls-bar">
+          <span class="demo-controls-label" data-i18n="demo.load_btn">Demo Mode</span>
+          <div class="demo-btn-group">
+            <button id="btn-demo-mode" class="btn btn-secondary btn-sm">
+              <span>⚡</span>
+              <span data-i18n="demo.load_btn">Demo mode</span>
+            </button>
+            <button id="btn-reset-demo" class="btn btn-outline btn-sm">
+              <span>↺</span>
+              <span data-i18n="demo.reset_btn">Reset demo</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
   </main>
 
   <!-- =========================================================================
@@ -448,6 +539,7 @@
 
   <!-- Scripts -->
   <script src="js/i18n.js"></script>
+  <script src="js/api.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
