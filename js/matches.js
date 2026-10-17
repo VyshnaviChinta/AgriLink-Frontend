@@ -461,7 +461,14 @@ document.addEventListener('DOMContentLoaded', () => {
         industry_name: pendingBookingMatch.industry.industry_name,
         residue_type: pendingBookingMatch.residue_type,
         quantity_tons: pendingBookingMatch.farmer.quantity_tons,
-        price_per_ton: pendingBookingMatch.farmer_ask
+        price_per_ton: pendingBookingMatch.farmer_ask,
+        farmer_state: pendingBookingMatch.farmer.state || '',
+        farmer_district: pendingBookingMatch.farmer.district || '',
+        industry_state: pendingBookingMatch.industry.state || '',
+        industry_district: pendingBookingMatch.industry.district || '',
+        farmer: pendingBookingMatch.farmer,
+        industry: pendingBookingMatch.industry,
+        is_demo: Boolean(pendingBookingMatch.is_demo)
       });
 
       closeBookingModal();

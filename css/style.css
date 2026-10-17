@@ -1984,6 +1984,399 @@ select.form-control:disabled {
   }
 }
 
+/* --------------------------------------------------------------------------
+   12. Impact Dashboard Styles (impact.html)
+   -------------------------------------------------------------------------- */
+.impact-toolbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem auto 2.5rem;
+  text-align: center;
+}
+
+/* Segmented Mode Switcher (Booked vs Potential) */
+.segmented-toggle-wrap {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--bg-surface);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-pill);
+  padding: 4px;
+  box-shadow: var(--shadow-sm);
+  max-width: 100%;
+}
+
+.segmented-btn {
+  padding: 0.65rem 1.4rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.92rem;
+  font-weight: 700;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.segmented-btn.active {
+  background: linear-gradient(135deg, var(--green-800), var(--green-600));
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(45, 106, 53, 0.28);
+}
+
+.impact-mode-notice {
+  font-size: 0.88rem;
+  color: var(--earth-700);
+  font-weight: 600;
+  background-color: var(--earth-50);
+  border: 1px dashed var(--earth-500);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1rem;
+}
+
+/* 7 Summary Cards Grid */
+.impact-metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.impact-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.35rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  border-top: 4px solid var(--green-600);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.impact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.impact-card.amber-top {
+  border-top-color: var(--amber-600);
+}
+
+.impact-card.earth-top {
+  border-top-color: var(--earth-700);
+}
+
+.impact-card-label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 0.45rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.impact-card-val {
+  font-size: clamp(1.6rem, 3.5vw, 2.1rem);
+  font-weight: 800;
+  color: var(--green-900);
+  line-height: 1.15;
+}
+
+.impact-card-val.amber {
+  color: var(--amber-700);
+}
+
+.impact-card-val.earth {
+  color: var(--earth-800);
+}
+
+.credit-note {
+  font-size: 0.78rem;
+  color: var(--earth-700);
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* Charts Grid */
+.impact-charts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  margin-bottom: 3rem;
+}
+
+.chart-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-card-header {
+  margin-bottom: 1.25rem;
+}
+
+.chart-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--green-900);
+}
+
+.chart-canvas-wrapper {
+  position: relative;
+  width: 100%;
+  height: 290px;
+}
+
+/* Government View Panel */
+.govt-view-panel {
+  background: linear-gradient(135deg, var(--bg-surface) 0%, var(--bg-surface-alt) 100%);
+  border: 2px solid var(--green-600);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow-md);
+}
+
+.govt-view-header {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.govt-view-badge {
+  display: inline-block;
+  padding: 0.25rem 0.8rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--green-100);
+  color: var(--green-900);
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.govt-view-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--green-900);
+}
+
+.govt-view-subtitle {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.govt-metrics-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.govt-metric-box {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.govt-metric-num {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--green-800);
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+}
+
+.govt-metric-num.amber {
+  color: var(--amber-700);
+}
+
+.govt-metric-num.earth {
+  color: var(--earth-700);
+}
+
+.govt-districts-list {
+  font-size: 0.8rem;
+  color: var(--earth-700);
+  font-weight: 600;
+  margin-top: 0.2rem;
+  margin-bottom: 0.45rem;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+.govt-metric-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.govt-metric-unit {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Assumptions & Calculation Methodology */
+.calc-methodology-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  margin-bottom: 4rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.calc-header {
+  margin-bottom: 1.5rem;
+}
+
+.calc-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--green-900);
+  margin-bottom: 0.35rem;
+}
+
+.calc-disclaimer {
+  font-size: 0.88rem;
+  color: var(--earth-800);
+  background-color: var(--amber-50);
+  border-left: 4px solid var(--amber-600);
+  padding: 0.65rem 0.9rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-top: 0.75rem;
+  font-weight: 600;
+}
+
+.calc-assumption-box {
+  background-color: #FAFCF9;
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.assumption-label {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.assumption-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.assumption-input {
+  min-height: 44px;
+  width: 140px;
+  padding: 0.45rem 0.85rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border-light);
+  outline: none;
+  font-family: inherit;
+  color: var(--green-900);
+  background: #FFFFFF;
+}
+
+.assumption-input:focus {
+  border-color: var(--green-600);
+  box-shadow: 0 0 0 3px rgba(45, 106, 53, 0.18);
+}
+
+.btn-reset-assumption {
+  padding: 0.55rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-reset-assumption:hover {
+  background-color: var(--earth-100);
+  border-color: var(--earth-600);
+}
+
+.calc-formulas-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.formula-item {
+  border-left: 3px solid var(--green-600);
+  padding-left: 0.85rem;
+}
+
+.formula-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--green-900);
+}
+
+.formula-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+@media (min-width: 640px) {
+  .impact-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .govt-metrics-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .calc-formulas-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .impact-metrics-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .impact-charts-grid {
+    grid-template-columns: 1.2fr 1fr;
+  }
+
+  .impact-charts-grid .chart-card:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+}
+
+
 
 /* --------------------------------------------------------------------------
    11. Responsive Breakpoints (Tablet & Desktop Enhancements)

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AgriLink Environmental & Economic Impact Dashboard - Track emissions averted, farmer revenue generated, and industrial biomass utilization.">
+  <meta name="theme-color" content="#1B4323">
+  <title>Environmental & Economic Impact - AgriLink</title>
+
+  <!-- Google Fonts: Multi-Script Noto Sans Stack -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Noto+Sans+Kannada:wght@400;500;600;700;800&family=Noto+Sans+Malayalam:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700;800&family=Noto+Sans+Telugu:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header" role="banner">
+    <div class="navbar-container">
+      <a href="index.html" class="brand-link" aria-label="AgriLink Home">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2L15 8L21 9L17 14L18 20L12 17L6 20L7 14L3 9L9 8L12 2Z" opacity="0.3"></path>
+            <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5a5.52 5.52 0 0 0 3 4.88V17c0-2.5 4.5-5 7-5 1.5 0 2.5 1 2.5 2.5 0 2-2.5 3.5-5 3.5"></path>
+          </svg>
+        </div>
+        <div class="brand-text-group">
+          <span class="brand-title" data-i18n="nav.brand">AgriLink</span>
+          <span class="brand-subtitle" data-i18n="nav.tagline_short">From Smoke to Sustainability</span>
+        </div>
+      </a>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <div class="lang-selector-wrap" title="Change Language">
+          <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <select id="lang-select" class="lang-select" aria-label="Select Language" data-i18n-aria-label="nav.select_lang">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+            <option value="te">తెలుగు</option>
+            <option value="kn">ಕನ್ನಡ</option>
+            <option value="ta">தமிழ்</option>
+            <option value="ml">മലയാളം</option>
+          </select>
+          <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+
+      <div class="nav-overlay" aria-hidden="true"></div>
+
+      <!-- Navigation Menu -->
+      <nav id="primary-nav" class="nav-menu" role="navigation" aria-label="Main menu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="farmer.html" class="nav-link" data-i18n="nav.farmer_portal">Farmer Portal</a>
+          </li>
+          <li class="nav-item">
+            <a href="industry.html" class="nav-link" data-i18n="nav.industry_portal">Industry Portal</a>
+          </li>
+          <li class="nav-item">
+            <a href="matches.html" class="nav-link nav-link-portal" data-i18n="nav.matches">Matches</a>
+          </li>
+          <li class="nav-item">
+            <a href="impact.html" class="nav-link nav-link-portal active" data-i18n="nav.impact">Impact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Impact Dashboard Container -->
+  <main class="container">
+    
+    <!-- Page Header -->
+    <div class="portal-page-header">
+      <div class="portal-hero-badge farmer">
+        <span>🌱</span>
+        <span data-i18n="impact.badge">Environmental & ESG Impact</span>
+      </div>
+      <h1 class="portal-page-title" data-i18n="impact.title">Sustainability & Economic Impact</h1>
+      <p class="portal-page-desc" data-i18n="impact.subtitle">
+        Quantifying emissions prevented, farmer wealth created, and clean industrial transition.
+      </p>
+      <div style="margin-top: 0.75rem;">
+        <span id="impact-sample-badge" class="badge-sample-data" style="display: none;" data-i18n="impact.sample_badge">Sample Data Active</span>
+      </div>
+    </div>
+
+    <!-- Segmented Mode Switcher & Mode Notice -->
+    <div class="impact-toolbar">
+      <div class="segmented-toggle-wrap" role="group" aria-label="Impact Mode">
+        <button id="toggle-booked" class="segmented-btn active" type="button" aria-pressed="true" data-i18n="impact.toggle_booked">
+          Booked Deals
+        </button>
+        <button id="toggle-potential" class="segmented-btn" type="button" aria-pressed="false" data-i18n="impact.toggle_potential">
+          Potential (from matches)
+        </button>
+      </div>
+      <div id="impact-mode-notice" class="impact-mode-notice" data-i18n="impact.mode_notice_booked">
+        Showing metrics from booked trades (demo, stored in this browser)
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <div id="impact-empty-state" class="matches-empty-state" style="display: none;">
+      <div class="empty-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"></path>
+          <path d="M12 6v6l4 2"></path>
+        </svg>
+      </div>
+      <h3 class="empty-title" data-i18n="impact.empty_title">No Impact Data Available</h3>
+      <p class="empty-desc" data-i18n="impact.empty_desc">
+        No booked trades or active matches recorded yet. Book deals or load sample data in the Matches portal to generate impact metrics.
+      </p>
+      <a href="matches.html" class="btn-action primary" style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; padding: 0.75rem 1.75rem; border-radius: var(--radius-pill); font-weight: 700;" data-i18n="impact.empty_btn">
+        Go to Matches Portal
+      </a>
+    </div>
+
+    <!-- Content Wrapper (Shown when data exists) -->
+    <div id="impact-content-wrap">
+      
+      <!-- 7 Summary Cards Grid (+ Commission Card) -->
+      <section class="impact-metrics-grid" aria-label="Key Impact Metrics">
+        
+        <!-- 1. Total Farmer Earnings -->
+        <div class="impact-card">
+          <div class="impact-card-label">
+            <span>💰</span>
+            <span data-i18n="impact.card_farmer_earnings">Total Farmer Earnings</span>
+          </div>
+          <div id="val-earnings" class="impact-card-val">₹0</div>
+        </div>
+
+        <!-- 2. Residue Diverted -->
+        <div class="impact-card amber-top">
+          <div class="impact-card-label">
+            <span>🌾</span>
+            <span data-i18n="impact.card_residue_diverted">Residue Diverted from Burning</span>
+          </div>
+          <div id="val-residue" class="impact-card-val amber">0 t</div>
+        </div>
+
+        <!-- 3. CO2 Avoided -->
+        <div class="impact-card earth-top">
+          <div class="impact-card-label">
+            <span>☁️</span>
+            <span data-i18n="impact.card_co2_avoided">CO₂ Emissions Avoided</span>
+          </div>
+          <div id="val-co2" class="impact-card-val earth">0 t</div>
+        </div>
+
+        <!-- 4. Mature Trees Equivalent -->
+        <div class="impact-card">
+          <div class="impact-card-label">
+            <span>🌲</span>
+            <span data-i18n="impact.card_trees_equiv">Mature Trees Equivalent</span>
+          </div>
+          <div id="val-trees" class="impact-card-val">0</div>
+        </div>
+
+        <!-- 5. Potential Carbon Credits -->
+        <div class="impact-card">
+          <div class="impact-card-label">
+            <span>📜</span>
+            <span data-i18n="impact.card_carbon_credits">Potential Carbon Credits (estimate)</span>
+          </div>
+          <div id="val-credits" class="impact-card-val">0</div>
+          <div class="credit-note" data-i18n="impact.credit_verification_note">
+            Real credits require third-party verification.
+          </div>
+        </div>
+
+        <!-- 6. Estimated Credit Value -->
+        <div class="impact-card amber-top">
+          <div class="impact-card-label">
+            <span>🏷️</span>
+            <span data-i18n="impact.card_credit_value">Estimated Credit Market Value</span>
+          </div>
+          <div id="val-credit-value" class="impact-card-val amber">₹0</div>
+        </div>
+
+        <!-- 7. Platform Fee on Trades -->
+        <div class="impact-card earth-top">
+          <div class="impact-card-label">
+            <span>🤝</span>
+            <span data-i18n="impact.card_platform_fee">Platform Fee on Trades (2%)</span>
+          </div>
+          <div id="val-platform-fee" class="impact-card-val earth">₹0</div>
+        </div>
+
+        <!-- 8. Platform Commission on Credits -->
+        <div class="impact-card">
+          <div class="impact-card-label">
+            <span>💼</span>
+            <span data-i18n="impact.card_brokerage_comm">Platform Commission on Credits (10%)</span>
+          </div>
+          <div id="val-brokerage" class="impact-card-val">₹0</div>
+        </div>
+
+      </section>
+
+      <!-- Charts Grid -->
+      <section class="impact-charts-grid" aria-label="Visualizations">
+        
+        <!-- Chart 1: Farmer Revenue -->
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <h2 class="chart-card-title" data-i18n="impact.chart_earnings_title">Farmer Revenue Generation (₹)</h2>
+          </div>
+          <div class="chart-canvas-wrapper">
+            <canvas id="chart-farmer-earnings"></canvas>
+          </div>
+        </div>
+
+        <!-- Chart 2: Industry Demand / Supply Trends -->
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <h2 class="chart-card-title" data-i18n="impact.chart_industry_title">Industry Biomass Demand (Tons)</h2>
+          </div>
+          <div class="chart-canvas-wrapper">
+            <canvas id="chart-industry-matches"></canvas>
+          </div>
+        </div>
+
+        <!-- Chart 3: Residue Distribution Doughnut -->
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <h2 class="chart-card-title" data-i18n="impact.chart_residue_title">Diverted Biomass Volume by Residue Type</h2>
+          </div>
+          <div class="chart-canvas-wrapper">
+            <canvas id="chart-residue-distribution"></canvas>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Government View Panel (Computed Numbers Only) -->
+      <section class="govt-view-panel" aria-label="Government and Regulatory View">
+        <div class="govt-view-header">
+          <span class="govt-view-badge" data-i18n="impact.badge">Official Registry</span>
+          <h2 class="govt-view-title" data-i18n="impact.govt_title">Government & Regulatory View</h2>
+          <p class="govt-view-subtitle" data-i18n="impact.govt_subtitle">
+            District-level summary of residue utilised and estimated emissions avoided
+          </p>
+        </div>
+
+        <div class="govt-metrics-row">
+          <div class="govt-metric-box">
+            <div id="val-govt-residue" class="govt-metric-num">0</div>
+            <div class="govt-metric-title" data-i18n="impact.govt_residue_utilised">Total Residue Utilised</div>
+            <div class="govt-metric-unit" data-i18n="impact.govt_unit_tons">Tons</div>
+          </div>
+          <div class="govt-metric-box">
+            <div id="val-govt-co2" class="govt-metric-num amber">0</div>
+            <div class="govt-metric-title" data-i18n="impact.govt_co2_saved">Net CO₂ Saved</div>
+            <div class="govt-metric-unit" data-i18n="impact.govt_unit_tonnes">Tonnes CO₂e</div>
+          </div>
+          <div class="govt-metric-box">
+            <div id="val-govt-districts" class="govt-metric-num earth">0</div>
+            <div id="val-govt-districts-list" class="govt-districts-list"></div>
+            <div class="govt-metric-title" data-i18n="impact.govt_districts_covered">Districts Covered</div>
+            <div class="govt-metric-unit" data-i18n="impact.govt_unit_districts">Districts</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Assumptions & Calculation Methodology Card -->
+      <section class="calc-methodology-card" aria-label="Calculation Assumptions and Methodology">
+        <div class="calc-header">
+          <h2 class="calc-title" data-i18n="impact.calc_title">How We Calculate</h2>
+          <div class="calc-disclaimer" data-i18n="impact.calc_disclaimer">
+            Estimated value used for demonstration; to be replaced with a verified emission factor.
+          </div>
+        </div>
+
+        <!-- Editable Emission Factor Assumption Box -->
+        <div class="calc-assumption-box">
+          <label for="emission-factor-input" class="assumption-label" data-i18n="impact.calc_editable_label">
+            Emission Factor Assumption (kg CO₂ avoided per ton):
+          </label>
+          <div class="assumption-controls">
+            <input type="number" id="emission-factor-input" class="assumption-input" value="1460" min="100" max="5000" step="10" aria-label="CO2 Avoided per Ton in kg">
+            <button type="button" id="btn-reset-factor" class="btn-reset-assumption" data-i18n="impact.calc_reset_btn">
+              Reset to Default (1,460)
+            </button>
+          </div>
+        </div>
+
+        <!-- Formulas Grid -->
+        <div class="calc-formulas-grid">
+          <div class="formula-item">
+            <div class="formula-title" data-i18n="impact.calc_f1_title">Emissions Averted</div>
+            <div class="formula-desc" data-i18n="impact.calc_f1_desc">
+              Residue Diverted (t) × Emission Factor (kg CO₂/t) ÷ 1,000
+            </div>
+          </div>
+          <div class="formula-item">
+            <div class="formula-title" data-i18n="impact.calc_f2_title">Tree Sequestration Equivalent</div>
+            <div class="formula-desc" data-i18n="impact.calc_f2_desc">
+              Total kg CO₂ Avoided ÷ 21 kg CO₂ absorbed per mature tree per year
+            </div>
+          </div>
+          <div class="formula-item">
+            <div class="formula-title" data-i18n="impact.calc_f3_title">Carbon Credits & Fees</div>
+            <div class="formula-desc" data-i18n="impact.calc_f3_desc">
+              1 Tonne CO₂e = 1 Credit at ₹800. Platform commission is 10% on credits and 2% fee on residue trades.
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding-top: 0;">
+        <p>&copy; 2026 AgriLink. <span data-i18n="footer.rights">All rights reserved. Transforming agricultural smoke into sustainable energy.</span></p>
+        <p><a href="index.html" style="color: #fff; text-decoration: underline;" data-i18n="nav.home">Home</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Local Chart.js, i18n, API, Impact Logic, Main Navigation -->
+  <script src="js/chart.umd.min.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/impact.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

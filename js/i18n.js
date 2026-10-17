@@ -224,7 +224,62 @@
       'matches.modal_desc': 'Submit a deal proposal between this farmer and industry buyer. Both parties will be notified for confirmation.',
       'matches.modal_confirm': 'Confirm Booking',
       'matches.modal_cancel': 'Cancel',
-      'matches.booking_success': 'Booking created successfully! Status set to Pending.'
+      'matches.booking_success': 'Booking created successfully! Status set to Pending.',
+
+      // Impact Dashboard Specific Keys
+      'impact.badge': 'Environmental & ESG Impact',
+      'impact.title': 'Sustainability & Economic Impact',
+      'impact.subtitle': 'Quantifying emissions prevented, farmer wealth created, and clean industrial transition.',
+      'impact.sample_badge': 'Sample Data Active',
+      'impact.toggle_booked': 'Booked Deals',
+      'impact.toggle_potential': 'Potential (from matches)',
+      'impact.mode_notice_booked': 'Showing metrics from booked trades (demo, stored in this browser)',
+      'impact.mode_notice_potential': 'Showing potential metrics from compatible matches (each farmer counted once).',
+
+      // Summary Cards
+      'impact.card_farmer_earnings': 'Total Farmer Earnings',
+      'impact.card_residue_diverted': 'Residue Diverted from Burning',
+      'impact.card_co2_avoided': 'CO₂ Emissions Avoided',
+      'impact.card_trees_equiv': 'Mature Trees Equivalent',
+      'impact.card_carbon_credits': 'Potential Carbon Credits (estimate)',
+      'impact.card_credit_value': 'Estimated Credit Market Value',
+      'impact.card_platform_fee': 'Platform Fee on Trades (2%)',
+      'impact.card_brokerage_comm': 'Platform Commission on Credits (10%)',
+      'impact.credit_verification_note': 'Real credits require third-party verification.',
+
+      // Charts
+      'impact.chart_earnings_title': 'Farmer Revenue Generation (₹)',
+      'impact.chart_industry_title': 'Industry Biomass Demand (Tons)',
+      'impact.chart_residue_title': 'Diverted Biomass Volume by Residue Type',
+      'impact.chart_earnings_axis': 'Earnings (₹)',
+      'impact.chart_industry_axis': 'Volume (Tons)',
+
+      // Government View
+      'impact.govt_title': 'Government & Regulatory View',
+      'impact.govt_subtitle': 'District-level summary of residue utilised and estimated emissions avoided',
+      'impact.govt_residue_utilised': 'Total Residue Utilised',
+      'impact.govt_co2_saved': 'Net CO₂ Saved',
+      'impact.govt_districts_covered': 'Districts Covered',
+      'impact.govt_unit_tons': 'Tons',
+      'impact.govt_unit_tonnes': 'Tonnes CO₂e',
+      'impact.govt_unit_districts': 'Districts',
+
+      // Methodology & Assumptions
+      'impact.calc_title': 'How We Calculate',
+      'impact.calc_disclaimer': 'Estimated value used for demonstration; to be replaced with a verified emission factor.',
+      'impact.calc_editable_label': 'Emission Factor Assumption (kg CO₂ avoided per ton):',
+      'impact.calc_reset_btn': 'Reset to Default (1,460)',
+      'impact.calc_f1_title': 'Emissions Averted',
+      'impact.calc_f1_desc': 'Residue Diverted (t) × Emission Factor (kg CO₂/t) ÷ 1,000',
+      'impact.calc_f2_title': 'Tree Sequestration Equivalent',
+      'impact.calc_f2_desc': 'Total kg CO₂ Avoided ÷ 21 kg CO₂ absorbed per mature tree per year',
+      'impact.calc_f3_title': 'Carbon Credits & Fees',
+      'impact.calc_f3_desc': '1 Tonne CO₂e = 1 Credit at ₹800. Platform commission is 10% on credits and 2% fee on residue trades.',
+
+      // Empty State
+      'impact.empty_title': 'No Impact Data Available',
+      'impact.empty_desc': 'No booked trades or active matches recorded yet. Book deals or load sample data in the Matches portal to generate impact metrics.',
+      'impact.empty_btn': 'Go to Matches Portal'
     },
 
     // ========================================================================
@@ -435,7 +490,62 @@
       'matches.modal_desc': 'इस किसान और खरीदार के बीच सौदे का प्रस्ताव भेजें। दोनों पक्षों को पुष्टि के लिए सूचित किया जाएगा।',
       'matches.modal_confirm': 'बुकिंग की पुष्टि करें',
       'matches.modal_cancel': 'रद्द करें',
-      'matches.booking_success': 'बुकिंग सफलतापूर्वक दर्ज हो गई! स्थिति "पुष्टि लंबित" है।'
+      'matches.booking_success': 'बुकिंग सफलतापूर्वक दर्ज हो गई! स्थिति "पुष्टि लंबित" है।',
+
+      // Impact Dashboard Specific Keys
+      'impact.badge': 'पर्यावरण व ईएसजी प्रभाव',
+      'impact.title': 'स्थिरता और आर्थिक प्रभाव',
+      'impact.subtitle': 'रोके गए प्रदूषण, किसानों की आय और औद्योगिक स्वच्छ ऊर्जा का वास्तविक मापन।',
+      'impact.sample_badge': 'नमूना डेटा सक्रिय',
+      'impact.toggle_booked': 'बुक किए गए सौदे',
+      'impact.toggle_potential': 'संभावित (मैचों से)',
+      'impact.mode_notice_booked': 'बुक किए गए सौदों से मेट्रिक्स प्रदर्शित (डेमो, इस ब्राउज़र में संगृहीत)',
+      'impact.mode_notice_potential': 'सक्रिय मैचों का संभावित प्रभाव (प्रति किसान एकल गणना)।',
+
+      // Summary Cards
+      'impact.card_farmer_earnings': 'किसानों की कुल आय',
+      'impact.card_residue_diverted': 'जलाने से रोकी गई पराली',
+      'impact.card_co2_avoided': 'रोका गया CO₂ उत्सर्जन',
+      'impact.card_trees_equiv': 'वृक्षारोपण के समतुल्य',
+      'impact.card_carbon_credits': 'संभावित कार्बन क्रेडिट (अनुमानित)',
+      'impact.card_credit_value': 'क्रेडिट का अनुमानित मूल्य',
+      'impact.card_platform_fee': 'व्यापार पर मंच शुल्क (२%)',
+      'impact.card_brokerage_comm': 'क्रेडिट पर मंच कमीशन (१०%)',
+      'impact.credit_verification_note': 'वास्तविक क्रेडिट के लिए तृतीय-पक्ष सत्यापन आवश्यक है।',
+
+      // Charts
+      'impact.chart_earnings_title': 'किसानवार अर्जित आय (₹)',
+      'impact.chart_industry_title': 'उद्योग बायोमास मांग (टन)',
+      'impact.chart_residue_title': 'अवशेष प्रकार के अनुसार पराली मात्रा',
+      'impact.chart_earnings_axis': 'आय (₹)',
+      'impact.chart_industry_axis': 'मात्रा (टन)',
+
+      // Government View
+      'impact.govt_title': 'सरकारी व नियामक अवलोकन',
+      'impact.govt_subtitle': 'उपयोग किए गए फसल अवशेष और अनुमानित उत्सर्जनों की बचत का ज़िला-स्तरीय सारांश',
+      'impact.govt_residue_utilised': 'कुल पराली का सदुपयोग',
+      'impact.govt_co2_saved': 'शुद्ध CO₂ बचत',
+      'impact.govt_districts_covered': 'शामिल ज़िले',
+      'impact.govt_unit_tons': 'टन',
+      'impact.govt_unit_tonnes': 'टन CO₂e',
+      'impact.govt_unit_districts': 'ज़िले',
+
+      // Methodology & Assumptions
+      'impact.calc_title': 'गणना विधि',
+      'impact.calc_disclaimer': 'Estimated value used for demonstration; to be replaced with a verified emission factor.',
+      'impact.calc_editable_label': 'उत्सर्जन कारक मान्यता (प्रति टन रोकी गई CO₂ किग्रा):',
+      'impact.calc_reset_btn': 'डिफ़ॉल्ट पर रीसेट करें (१,४६०)',
+      'impact.calc_f1_title': 'रोका गया उत्सर्जन',
+      'impact.calc_f1_desc': 'रोकी गई पराली (टन) × उत्सर्जन कारक (किग्रा/टन) ÷ १,०००',
+      'impact.calc_f2_title': 'वृक्ष अवशोषण समतुल्य',
+      'impact.calc_f2_desc': 'कुल रोकी गई CO₂ (किग्रा) ÷ २१ किग्रा प्रति वृक्ष प्रति वर्ष',
+      'impact.calc_f3_title': 'कार्बन क्रेडिट व शुल्क',
+      'impact.calc_f3_desc': '१ टन CO₂e = १ क्रेडिट (₹८००)। क्रेडिट पर १०% मंच कमीशन व व्यापार पर २% मंच शुल्क।',
+
+      // Empty State
+      'impact.empty_title': 'कोई प्रभाव डेटा उपलब्ध नहीं',
+      'impact.empty_desc': 'अभी तक कोई सौदा या सक्रिय मैच दर्ज नहीं हुआ है। प्रभाव देखने के लिए मैच पोर्टल में सौदे बुक करें या नमूना डेटा लोड करें।',
+      'impact.empty_btn': 'मैच पोर्टल पर जाएं'
     },
 
     // ========================================================================
@@ -580,7 +690,7 @@
       'state.uttar_pradesh': 'ఉత్తరప్రదేశ్ (Uttar Pradesh)',
       'state.andhra_pradesh': 'ఆంధ్రప్రదేశ్ (Andhra Pradesh)',
       'state.telangana': 'తెలంగాణ (Telangana)',
-      'state.karnataka': 'కర్ణాటಕ (Karnataka)',
+      'state.karnataka': 'కర్ణాటక (Karnataka)',
       'state.tamil_nadu': 'తమిళనాడు (Tamil Nadu)',
       'state.kerala': 'కేరళ (Kerala)',
 
@@ -646,7 +756,62 @@
       'matches.modal_desc': 'ఈ రైతు మరియు పరిశ్రమ మధ్య ఒప్పంద ప్రతిపాదనను పంపండి. ఇరు పక్షాలకు నిర్ధారణ సమాచారం పంపబడుతుంది.',
       'matches.modal_confirm': 'బుకింగ్ నిర్ధారించండి',
       'matches.modal_cancel': 'రద్దు చేయండి',
-      'matches.booking_success': 'బుకింగ్ విజయవంతంగా సృష్టించబడింది! స్థితి "నిర్ధారణ పెండింగ్" గా మార్చబడింది.'
+      'matches.booking_success': 'బుకింగ్ విజయవంతంగా సృష్టించబడింది! స్థితి "నిర్ధారణ పెండింగ్" గా మార్చబడింది.',
+
+      // Impact Dashboard Specific Keys
+      'impact.badge': 'పర్యావరణ & ESG ప్రభావం',
+      'impact.title': 'సుస్థిరత మరియు ఆర్థిక ప్రభావం',
+      'impact.subtitle': 'నివారించిన కాలుష్యం, రైతుల ఆదాయం మరియు స్వచ్ఛమైన పారిశ్రామిక మార్పు యొక్క సమగ్ర నివేదిక.',
+      'impact.sample_badge': 'నమూనా డేటా అమలులో ఉంది',
+      'impact.toggle_booked': 'బుక్ చేసిన ఒప్పందాలు',
+      'impact.toggle_potential': 'సంభావ్యత (మ్యాచ్‌ల నుండి)',
+      'impact.mode_notice_booked': 'బుక్ చేసిన ట్రేడ్‌ల నుండి గణాంకాలు (డెమో, ఈ బ్రౌజర్‌లో నిల్వ చేయబడింది)',
+      'impact.mode_notice_potential': 'అందుబాటులోని మ్యాచ్‌ల నుండి అంచనా వేసిన ప్రభావం (రైతుకు ఒకేసారి లెక్కింపు).',
+
+      // Summary Cards
+      'impact.card_farmer_earnings': 'రైతుల మొత్తం ఆదాయం',
+      'impact.card_residue_diverted': 'కాలుష్య రహితంగా మళ్లించిన వ్యర్థాలు',
+      'impact.card_co2_avoided': 'నివారించబడిన CO₂ ఉద్గారాలు',
+      'impact.card_trees_equiv': 'చెట్ల పెంపకంతో సమానం',
+      'impact.card_carbon_credits': 'సంభావ్య కార్బన్ క్రెడిట్స్ (అంచనా)',
+      'impact.card_credit_value': 'క్రెడిట్స్ అంచనా విలువ',
+      'impact.card_platform_fee': 'లావాదేవీలపై ప్లాట్‌ఫారమ్ రుసుము (2%)',
+      'impact.card_brokerage_comm': 'క్రెడిట్స్‌పై ప్లాట్‌ఫారమ్ కమీషన్ (10%)',
+      'impact.credit_verification_note': 'నిజమైన క్రెడిట్లకు థర్డ్ పార్టీ ధృవీకరణ తప్పనిసరి.',
+
+      // Charts
+      'impact.chart_earnings_title': 'రైతువారీ ఆదాయం (₹)',
+      'impact.chart_industry_title': 'పరిశ్రమల బయోమాస్ డిమాండ్ (టన్నులు)',
+      'impact.chart_residue_title': 'వ్యర్థాల రకం ప్రకారం పరిమాణం',
+      'impact.chart_earnings_axis': 'ఆదాయం (₹)',
+      'impact.chart_industry_axis': 'పరిమాణం (టన్నులు)',
+
+      // Government View
+      'impact.govt_title': 'ప్రభుత్వ & నియంత్రణ నివేదిక',
+      'impact.govt_subtitle': 'సద్వినియోగం చేసుకున్న వ్యర్థాలు మరియు నివారించిన ఉద్గారాల అంచనా జిల్లా స్థాయి సారాంశం',
+      'impact.govt_residue_utilised': 'సద్వినియోగమైన మొత్తం వ్యర్థాలు',
+      'impact.govt_co2_saved': 'నికర CO₂ ఆదా',
+      'impact.govt_districts_covered': 'పరిధిలోని జిల్లాలు',
+      'impact.govt_unit_tons': 'టన్నులు',
+      'impact.govt_unit_tonnes': 'టన్నుల CO₂e',
+      'impact.govt_unit_districts': 'జిల్లాలు',
+
+      // Methodology & Assumptions
+      'impact.calc_title': 'గణన విధానం',
+      'impact.calc_disclaimer': 'Estimated value used for demonstration; to be replaced with a verified emission factor.',
+      'impact.calc_editable_label': 'ఉద్గార కారకం అంచనా (టన్నుకు నివారించిన CO₂ కిలోలు):',
+      'impact.calc_reset_btn': 'సాధారణ విలువకు రీసెట్ చేయండి (1,460)',
+      'impact.calc_f1_title': 'నివారించిన ఉద్గారాలు',
+      'impact.calc_f1_desc': 'మళ్లించిన వ్యర్థాలు (టన్నులు) × ఉద్గార కారకం (కిలోలు/టన్ను) ÷ 1,000',
+      'impact.calc_f2_title': 'చెట్ల శోషణ సమానత',
+      'impact.calc_f2_desc': 'మొత్తం నివారించిన CO₂ (కిలోలు) ÷ చెట్టుకు సంవత్సరానికి 21 కిలోల CO₂ శోషణ',
+      'impact.calc_f3_title': 'కార్బన్ క్రెడిట్స్ & ఫీజులు',
+      'impact.calc_f3_desc': '1 టన్ను CO₂e = 1 క్రెడిట్ (₹800). క్రెడిట్స్‌పై 10% కమీషన్ మరియు వ్యర్థాల వ్యాపారంపై 2% ప్లాట్‌ఫారమ్ రుసుము.',
+
+      // Empty State
+      'impact.empty_title': 'ప్రభావ నివేదిక డేటా అందుబాటులో లేదు',
+      'impact.empty_desc': 'ఇంకా ఎలాంటి ఒప్పందాలు లేదా మ్యాచ్‌లు నమోదు కాలేదు. ప్రభావ వివరాలను చూడటానికి మ్యాచ్‌ల పోర్టల్‌లో ఒప్పందాలు బుక్ చేయండి లేదా నమూనా డేటా లోడ్ చేయండి.',
+      'impact.empty_btn': 'మ్యాచ్‌ల పోర్టల్‌కు వెళ్లండి'
     },
 
     // ========================================================================
@@ -857,7 +1022,62 @@
       'matches.modal_desc': 'ಈ ರೈತ ಮತ್ತು ಖರೀದಿದಾರರ ನಡುವೆ ಒಪ್ಪಂದದ ಪ್ರಸ್ತಾವನೆಯನ್ನು ಸಲ್ಲಿಸಿ. ದೃಢೀಕರಣಕ್ಕಾಗಿ ಎರಡೂ ಕಡೆಗೆ ಸೂಚಿಸಲಾಗುತ್ತದೆ.',
       'matches.modal_confirm': 'ಬುಕಿಂಗ್ ದೃಢೀಕರಿಸಿ',
       'matches.modal_cancel': 'ರದ್ದುಮಾಡಿ',
-      'matches.booking_success': 'ಬುಕಿಂಗ್ ಯಶಸ್ವಿಯಾಗಿ ಸೃಷ್ಟಿಯಾಗಿದೆ! ಸ್ಥಿತಿಯನ್ನು "ದೃಢೀಕರಣ ಬಾಕಿ" ಎಂದು ನಮೂದಿಸಲಾಗಿದೆ.'
+      'matches.booking_success': 'ಬುಕಿಂಗ್ ಯಶಸ್ವಿಯಾಗಿ ಸೃಷ್ಟಿಯಾಗಿದೆ! ಸ್ಥಿತಿಯನ್ನು "ದೃಢೀಕರಣ ಬಾಕಿ" ಎಂದು ನಮೂದಿಸಲಾಗಿದೆ.',
+
+      // Impact Dashboard Specific Keys
+      'impact.badge': 'ಪರಿಸರ & ESG ಪ್ರಭಾವ',
+      'impact.title': 'ಸುಸ್ಥಿರತೆ ಮತ್ತು ಆರ್ಥಿಕ ಪರಿಣಾಮ',
+      'impact.subtitle': 'ತಡೆಗಟ್ಟಲಾದ ಮಾಲಿನ್ಯ, ರೈತರ ಆದಾಯ ಮತ್ತು ಹಸಿರು ಕೈಗಾರಿಕಾ ಪರಿವರ್ತನೆಯ ವಾಸ್ತವಿಕ ವರದಿ.',
+      'impact.sample_badge': 'ಮಾದರಿ ಡೇಟಾ ಸಕ್ರಿಯವಾಗಿದೆ',
+      'impact.toggle_booked': 'ಬುಕ್ ಮಾಡಿದ ಒಪ್ಪಂದಗಳು',
+      'impact.toggle_potential': 'ಸಂಭಾವ್ಯ (ಹೊಂದಾಣಿಕೆಗಳಿಂದ)',
+      'impact.mode_notice_booked': 'ಬುಕ್ ಮಾಡಿದ ವಹಿವಾಟುಗಳಿಂದ ಮೆಟ್ರಿಕ್‌ಗಳನ್ನು ತೋರಿಸಲಾಗುತ್ತಿದೆ (ಡೆಮೊ, ಈ ಬ್ರೌಸರ್‌ನಲ್ಲಿ ಸಂಗ್ರಹಿಸಲಾಗಿದೆ)',
+      'impact.mode_notice_potential': 'ಲಭ್ಯವಿರುವ ಹೊಂದಾಣಿಕೆಗಳ ಸಂಭಾವ್ಯ ಪರಿಣಾಮ (ಪ್ರತಿ ರೈತನಿಗೆ ಒಂದೇ ಲೆಕ್ಕಾಚಾರ).',
+
+      // Summary Cards
+      'impact.card_farmer_earnings': 'ರೈತರ ಒಟ್ಟು ಗಳಿಕೆ',
+      'impact.card_residue_diverted': 'ಸುಡುವಿಕೆಯಿಂದ ತಪ್ಪಿಸಿದ ಬೆಳೆ ತ್ಯಾಜ್ಯ',
+      'impact.card_co2_avoided': 'ತಡೆಗಟ್ಟಲಾದ CO₂ ಹೊರಸೂಸುವಿಕೆ',
+      'impact.card_trees_equiv': 'ಬೆಳೆಸಿದ ಮರಗಳಿಗೆ ಸಮಾನ',
+      'impact.card_carbon_credits': 'ಸಂಭಾವ್ಯ ಕಾರ್ಬನ್ ಕ್ರೆಡಿಟ್‌ಗಳು (ಅಂದಾಜು)',
+      'impact.card_credit_value': 'ಕ್ರೆಡಿಟ್ ಮಾರುಕಟ್ಟೆ ಮೌಲ್ಯ',
+      'impact.card_platform_fee': 'ವಹಿವಾಟಿನ ಮೇಲೆ ವೇದಿಕೆ ಶುಲ್ಕ (೨%)',
+      'impact.card_brokerage_comm': 'ಕ್ರೆಡಿಟ್ ಮೇಲೆ ವೇದಿಕೆ ಕಮಿಷನ್ (೧೦%)',
+      'impact.credit_verification_note': 'ನಿಜವಾದ ಕ್ರೆಡಿಟ್‌ಗಳಿಗೆ ತೃತೀಯ ಪಕ್ಷದ ಪರಿಶೀಲನೆ ಅಗತ್ಯವಿದೆ.',
+
+      // Charts
+      'impact.chart_earnings_title': 'ರೈತವಾರು ಗಳಿಸಿದ ಆದಾಯ (₹)',
+      'impact.chart_industry_title': 'ಕೈಗಾರಿಕೆಗಳ ಬಯೋಮಾಸ್ ಬೇಡಿಕೆ (ಟನ್)',
+      'impact.chart_residue_title': 'ತ್ಯಾಜ್ಯದ ವಿಧದ ಪ್ರಕಾರ ಪ್ರಮಾಣ',
+      'impact.chart_earnings_axis': 'ಗಳಿಕೆ (₹)',
+      'impact.chart_industry_axis': 'ಪ್ರಮಾಣ (ಟನ್)',
+
+      // Government View
+      'impact.govt_title': 'ಸರ್ಕಾರಿ ಮತ್ತು ನಿಯಂತ್ರಕ ನೋಟ',
+      'impact.govt_subtitle': 'ಬಳಕೆಯಾದ ಬೆಳೆ ತ್ಯಾಜ್ಯ ಮತ್ತು ತಪ್ಪಿಸಲಾದ ಅಂದಾಜು ಹೊರಸೂಸುವಿಕೆಯ ಜಿಲ್ಲಾ ಮಟ್ಟದ ಸಾರಾಂಶ',
+      'impact.govt_residue_utilised': 'ಸದ್ಬಳಕೆಯಾದ ಒಟ್ಟು ತ್ಯಾಜ್ಯ',
+      'impact.govt_co2_saved': 'ಉಳಿಸಲಾದ ನಿವ್ವಳ CO₂',
+      'impact.govt_districts_covered': 'ಒಳಗೊಂಡ ಜಿಲ್ಲೆಗಳು',
+      'impact.govt_unit_tons': 'ಟನ್',
+      'impact.govt_unit_tonnes': 'ಟನ್ CO₂e',
+      'impact.govt_unit_districts': 'ಜಿಲ್ಲೆಗಳು',
+
+      // Methodology & Assumptions
+      'impact.calc_title': 'ಲೆಕ್ಕಾಚಾರದ ವಿಧಾನ',
+      'impact.calc_disclaimer': 'Estimated value used for demonstration; to be replaced with a verified emission factor.',
+      'impact.calc_editable_label': 'ಹೊರಸೂಸುವಿಕೆ ಅಂಶದ ಅಂದಾಜು (ಪ್ರತಿ ಟನ್‌ಗೆ ತಪ್ಪಿಸಿದ CO₂ ಕೆಜಿ):',
+      'impact.calc_reset_btn': 'ಡೀಫಾಲ್ಟ್‌ಗೆ ಮರುಹೊಂದಿಸಿ (೧,೪೬೦)',
+      'impact.calc_f1_title': 'ತಡೆಗಟ್ಟಲಾದ ಹೊರಸೂಸುವಿಕೆ',
+      'impact.calc_f1_desc': 'ತಪ್ಪಿಸಿದ ತ್ಯಾಜ್ಯ (ಟನ್) × ಹೊರಸೂಸುವಿಕೆ ಅಂಶ (ಕೆಜಿ/ಟನ್) ÷ ೧,೦೦೦',
+      'impact.calc_f2_title': 'ಮರಗಳ ಇಂಗಾಲ ಹೀರಿಕೆಗೆ ಸಮಾನ',
+      'impact.calc_f2_desc': 'ಒಟ್ಟು ತಪ್ಪಿಸಿದ CO₂ (ಕೆಜಿ) ÷ ಪ್ರತಿ ಮರಕ್ಕೆ ವಾರ್ಷಿಕ ೨೧ ಕೆಜಿ CO₂ ಹೀರಿಕೆ',
+      'impact.calc_f3_title': 'ಕಾರ್ಬನ್ ಕ್ರೆಡಿಟ್ ಮತ್ತು ಶುಲ್ಕ',
+      'impact.calc_f3_desc': '೧ ಟನ್ CO₂e = ೧ ಕ್ರೆಡಿಟ್ (₹೮೦೦). ಕ್ರೆಡಿಟ್ ಮೇಲೆ ೧೦% ಕಮಿಷನ್ ಮತ್ತು ವ್ಯಾಪಾರದ ಮೇಲೆ ೨% ವೇದಿಕೆ ಶುಲ್ಕ.',
+
+      // Empty State
+      'impact.empty_title': 'ಯಾವುದೇ ಪರಿಣಾಮದ ಡೇಟಾ ಲಭ್ಯವಿಲ್ಲ',
+      'impact.empty_desc': 'ಇನ್ನೂ ಯಾವುದೇ ಒಪ್ಪಂದಗಳು ದಾಖಲಾಗಿಲ್ಲ. ಪರಿಣಾಮ ವೀಕ್ಷಿಸಲು ಹೊಂದಾಣಿಕೆಗಳ ಪೋರ್ಟಲ್‌ನಲ್ಲಿ ಒಪ್ಪಂದ ಬುಕ್ ಮಾಡಿ ಅಥವಾ ಮಾದರಿ ಡೇಟಾ ಲೋಡ್ ಮಾಡಿ.',
+      'impact.empty_btn': 'ಹೊಂದಾಣಿಕೆಗಳ ಪೋರ್ಟಲ್‌ಗೆ ಹೋಗಿ'
     },
 
     // ========================================================================
@@ -1068,7 +1288,62 @@
       'matches.modal_desc': 'இந்த விவசாயி மற்றும் வாங்குபவருக்கு இடையே ஒப்பந்த முன்மொழிவை அனுப்பவும். உறுதிப்படுத்தலுக்கு இரு தரப்பிற்கும் அறிவிக்கப்படும்.',
       'matches.modal_confirm': 'முன்பதிவை உறுதி செய்க',
       'matches.modal_cancel': 'ரத்து செய்க',
-      'matches.booking_success': 'முன்பதிவு வெற்றிகரமாக உருவாக்கப்பட்டது! நிலை "உறுதிப்படுத்தல் நிலுவையில்" என அமைக்கப்பட்டது.'
+      'matches.booking_success': 'முன்பதிவு வெற்றிகரமாக உருவாக்கப்பட்டது! நிலை "உறுதிப்படுத்தல் நிலுவையில்" என அமைக்கப்பட்டது.',
+
+      // Impact Dashboard Specific Keys
+      'impact.badge': 'சுற்றுச்சூழல் & ESG தாக்கம்',
+      'impact.title': 'நிலைத்தன்மை மற்றும் பொருளாதார தாக்கம்',
+      'impact.subtitle': 'தடுக்கப்பட்ட உமிழ்வுகள், விவசாயிகள் வருவாய் மற்றும் பசுமை தொழில்துறை மாற்றத்தின் அளவீடுகள்.',
+      'impact.sample_badge': 'மாதிரி தரவு பயன்பாட்டில் உள்ளது',
+      'impact.toggle_booked': 'முன்பதிவு செய்யப்பட்ட ஒப்பந்தங்கள்',
+      'impact.toggle_potential': 'சாத்தியமானவை (பொருத்தங்களிலிருந்து)',
+      'impact.mode_notice_booked': 'முன்பதிவு செய்யப்பட்ட ஒப்பந்தங்களின் புள்ளிவிவரங்கள் (டெமோ, இந்த உலாவியில் சேமிக்கப்பட்டது)',
+      'impact.mode_notice_potential': 'சாத்தியமான பொருத்தங்களின் எதிர்பார்க்கப்படும் தாக்கம் (ஒரு உழவருக்கு ஒரு முறை கணக்கீடு).',
+
+      // Summary Cards
+      'impact.card_farmer_earnings': 'விவசாயிகளின் மொத்த வருவாய்',
+      'impact.card_residue_diverted': 'எரிக்கப்படாமல் பாதுகாக்கப்பட்ட கழிவு',
+      'impact.card_co2_avoided': 'தவிர்க்கப்பட்ட CO₂ உமிழ்வு',
+      'impact.card_trees_equiv': 'வளர்ந்த மரங்களுக்கு சமம்',
+      'impact.card_carbon_credits': 'சாத்தியமான கார்பன் வரவுகள் (மதிப்பீடு)',
+      'impact.card_credit_value': 'கார்பன் வரவுகளின் மதிப்பு',
+      'impact.card_platform_fee': 'வர்த்தக தள கட்டணம் (2%)',
+      'impact.card_brokerage_comm': 'வரவுகளுக்கான தள கமிஷன் (10%)',
+      'impact.credit_verification_note': 'உண்மையான கார்பன் வரவுகளுக்கு மூன்றாம் தரப்பு சான்றிதழ் அவசியம்.',
+
+      // Charts
+      'impact.chart_earnings_title': 'விவசாயி வாரியான வருவாய் (₹)',
+      'impact.chart_industry_title': 'தொழில்துறை பயோமாஸ் தேவை (டன்கள்)',
+      'impact.chart_residue_title': 'கழிவு வகை வாரியாக அளவு',
+      'impact.chart_earnings_axis': 'வருவாய் (₹)',
+      'impact.chart_industry_axis': 'அளவு (டன்கள்)',
+
+      // Government View
+      'impact.govt_title': 'அரசு மற்றும் ஒழுங்குமுறை பார்வை',
+      'impact.govt_subtitle': 'பயன்படுத்தப்பட்ட பயிர்க்கழிவு மற்றும் தவிர்க்கப்பட்ட உமிழ்வுகளின் மாவட்ட அளவிலான சுருக்கம்',
+      'impact.govt_residue_utilised': 'பயன்படுத்தப்பட்ட மொத்த கழிவு',
+      'impact.govt_co2_saved': 'சேமிக்கப்பட்ட நிகர CO₂',
+      'impact.govt_districts_covered': 'உட்பட்ட மாவட்டங்கள்',
+      'impact.govt_unit_tons': 'டன்கள்',
+      'impact.govt_unit_tonnes': 'டன்கள் CO₂e',
+      'impact.govt_unit_districts': 'மாவட்டங்கள்',
+
+      // Methodology & Assumptions
+      'impact.calc_title': 'கணக்கீட்டு முறை',
+      'impact.calc_disclaimer': 'Estimated value used for demonstration; to be replaced with a verified emission factor.',
+      'impact.calc_editable_label': 'உமிழ்வு காரணி அனுமானம் (டன்னுக்கு தவிர்க்கப்பட்ட CO₂ கிலோ):',
+      'impact.calc_reset_btn': 'இயல்புநிலைக்கு மீட்டமைக்கவும் (1,460)',
+      'impact.calc_f1_title': 'தவிர்க்கப்பட்ட உமிழ்வுகள்',
+      'impact.calc_f1_desc': 'தவிர்க்கப்பட்ட கழிவு (டன்) × உமிழ்வு காரணி (கிலோ/டன்) ÷ 1,000',
+      'impact.calc_f2_title': 'மரங்களின் உறிஞ்சுதல் சமம்',
+      'impact.calc_f2_desc': 'தவிர்க்கப்பட்ட மொத்த CO₂ (கிலோ) ÷ ஒரு மரத்திற்கு ஆண்டுக்கு 21 கிலோ CO₂',
+      'impact.calc_f3_title': 'கார்பன் வரவுகள் மற்றும் கட்டணம்',
+      'impact.calc_f3_desc': '1 டன் CO₂e = 1 வரவு (₹800). வரவுகளுக்கு 10% கமிஷன் மற்றும் வர்த்தகத்திற்கு 2% தள கட்டணம்.',
+
+      // Empty State
+      'impact.empty_title': 'தாக்க தரவு எதுவும் கிடைக்கவில்லை',
+      'impact.empty_desc': 'இன்னும் ஒப்பந்தங்கள் எதுவும் பதிவாகவில்லை. தாக்க விவரங்களைக் காண பொருத்தங்கள் போர்ட்டலில் ஒப்பந்தங்களை பதிவு செய்யவும் அல்லது மாதிரி தரவை ஏற்றவும்.',
+      'impact.empty_btn': 'பொருத்தங்கள் போர்ட்டலுக்கு செல்லவும்'
     },
 
     // ========================================================================
@@ -1279,7 +1554,62 @@
       'matches.modal_desc': 'ഈ കർഷകനും കമ്പനിക്കും ഇടയിലുള്ള കരാർ നിർദ്ദേശം സമർപ്പിക്കുക. സ്ഥിരീകരണത്തിനായി ഇരുവർക്കും വിവരം ലഭിക്കും.',
       'matches.modal_confirm': 'ബുക്കിംഗ് സ്ഥിരീകരിക്കുക',
       'matches.modal_cancel': 'റദ്ദാക്കുക',
-      'matches.booking_success': 'ബുക്കിംഗ് വിജയകരമായി സമർപ്പിച്ചു! നിലവിലെ അവസ്ഥ: സ്ഥിരീകരണം കാത്തിരിക്കുന്നു.'
+      'matches.booking_success': 'ബുക്കിംഗ് വിജയകരമായി സമർപ്പിച്ചു! നിലവിലെ അവസ്ഥ: സ്ഥിരീകരണം കാത്തിരിക്കുന്നു.',
+
+      // Impact Dashboard Specific Keys
+      'impact.badge': 'പാരിസ്ഥിതിക & ESG നേട്ടങ്ങൾ',
+      'impact.title': 'സുസ്ഥിരതയും സാമ്പത്തിക നേട്ടങ്ങളും',
+      'impact.subtitle': 'തടഞ്ഞ മലിനീകരണം, കർഷകരുടെ വരുമാനം, ഹരിത വ്യവസായ പരിവർത്തനം എന്നിവയുടെ അളവുകോൽ.',
+      'impact.sample_badge': 'സാമ്പിൾ ഡാറ്റ നിലവിലുണ്ട്',
+      'impact.toggle_booked': 'ബുക്ക് ചെയ്ത കരാറുകൾ',
+      'impact.toggle_potential': 'സാധ്യതകൾ (പൊരുത്തങ്ങളിൽ നിന്ന്)',
+      'impact.mode_notice_booked': 'ബുക്ക് ചെയ്ത ഇടപാടുകളിൽ നിന്നുള്ള കണക്കുകൾ കാണിക്കുന്നു (ഡെമോ, ഈ ബ്രൗസറിൽ സൂക്ഷിച്ചത്)',
+      'impact.mode_notice_potential': 'ലഭ്യമായ പൊരുത്തങ്ങളിൽ നിന്നുള്ള സാധ്യതകൾ (ഒരു കർഷകന് ഒരു തവണ മാത്രം കണക്കാക്കുന്നു).',
+
+      // Summary Cards
+      'impact.card_farmer_earnings': 'കർഷകരുടെ ആകെ വരുമാനം',
+      'impact.card_residue_diverted': 'തീയിടാതെ മാറ്റിയ അവശിഷ്ടങ്ങൾ',
+      'impact.card_co2_avoided': 'ഒഴിവാക്കിയ CO₂ ഉദ്‌വമനം',
+      'impact.card_trees_equiv': 'നട്ടുപിടിപ്പിച്ച മരങ്ങൾക്ക് തുല്യം',
+      'impact.card_carbon_credits': 'സാധ്യതയുള്ള കാർബൺ ക്രെഡിറ്റുകൾ (അനുമാനം)',
+      'impact.card_credit_value': 'ക്രെഡിറ്റിന്റെ വിപണി മൂല്യം',
+      'impact.card_platform_fee': 'വ്യാപാര പ്ലാറ്റ്‌ഫോം ഫീസ് (2%)',
+      'impact.card_brokerage_comm': 'ക്രെഡിറ്റിലെ പ്ലാറ്റ്‌ഫോം കമ്മീഷൻ (10%)',
+      'impact.credit_verification_note': 'യഥാർത്ഥ ക്രെഡിറ്റുകൾക്ക് മൂന്നാം കക്ഷി സാക്ഷ്യപ്പെടുത്തൽ ആവശ്യമാണ്.',
+
+      // Charts
+      'impact.chart_earnings_title': 'കർഷകരുടെ വരുമാനം (₹)',
+      'impact.chart_industry_title': 'വ്യവസായ ബയോമാസ് ആവശ്യം (ടൺ)',
+      'impact.chart_residue_title': 'അവശിഷ്ട തരം തിരിച്ചുള്ള അളവ്',
+      'impact.chart_earnings_axis': 'വരുമാനം (₹)',
+      'impact.chart_industry_axis': 'അളവ് (ടൺ)',
+
+      // Government View
+      'impact.govt_title': 'സർക്കാർ & നിയന്ത്രണ റിപ്പോർട്ട്',
+      'impact.govt_subtitle': 'ഉപയോഗിച്ച വിള അവശിഷ്ടങ്ങളുടെയും ഒഴിവാക്കിയ കണക്കാക്കിയ ഉദ്വമനങ്ങളുടെയും ജില്ലാ തല സംഗ്രഹം',
+      'impact.govt_residue_utilised': 'പുനരുപയോഗിച്ച ആകെ അവശിഷ്ടം',
+      'impact.govt_co2_saved': 'ആകെ സംരക്ഷിച്ച CO₂',
+      'impact.govt_districts_covered': 'ഉൾപ്പെട്ട ജില്ലകൾ',
+      'impact.govt_unit_tons': 'ടൺ',
+      'impact.govt_unit_tonnes': 'ടൺ CO₂e',
+      'impact.govt_unit_districts': 'ജില്ലകൾ',
+
+      // Methodology & Assumptions
+      'impact.calc_title': 'കണക്കുകൂട്ടൽ രീതി',
+      'impact.calc_disclaimer': 'Estimated value used for demonstration; to be replaced with a verified emission factor.',
+      'impact.calc_editable_label': 'ഉദ്‌വമന ഘടകം (ഒരു ടൺ അവശിഷ്ടത്തിന് ഒഴിവാക്കിയ CO₂ കിലോഗ്രാം):',
+      'impact.calc_reset_btn': 'യഥാർത്ഥ നിരക്കിലേക്ക് മാറ്റുക (1,460)',
+      'impact.calc_f1_title': 'ഒഴിവാക്കിയ ഉദ്‌വമനം',
+      'impact.calc_f1_desc': 'മാറ്റിയ അവശിഷ്ടം (ടൺ) × ഉദ്‌വമന ഘടകം (കിലോ/ടൺ) ÷ 1,000',
+      'impact.calc_f2_title': 'മരങ്ങൾ ആഗിരണം ചെയ്യുന്നതിന് തുല്യം',
+      'impact.calc_f2_desc': 'ഒഴിവാക്കിയ ആകെ CO₂ (കിലോ) ÷ ഒരു മരം പ്രതിവർഷം ആഗിരണം ചെയ്യുന്ന 21 കിലോ CO₂',
+      'impact.calc_f3_title': 'കാർബൺ ക്രെഡിറ്റും കമ്മീഷനും',
+      'impact.calc_f3_desc': '1 ടൺ CO₂e = 1 ക്രെഡിറ്റ് (₹800). ക്രെഡിറ്റിൽ 10% കമ്മീഷനും വ്യാപാരത്തിൽ 2% പ്ലാറ്റ്‌ഫോം ഫീസും.',
+
+      // Empty State
+      'impact.empty_title': 'ഡാറ്റ ലഭ്യമല്ല',
+      'impact.empty_desc': 'ഇതുവരെ കരാറുകളോ പൊരുത്തങ്ങളോ രേഖപ്പെടുത്തിയിട്ടില്ല. ഡാറ്റ കാണുന്നതിന് പൊരുത്തങ്ങളുടെ പോർട്ടലിൽ കരാറുകൾ ഉറപ്പിക്കുകയോ സാമ്പിൾ ഡാറ്റ ലോഡ് ചെയ്യുകയോ ചെയ്യുക.',
+      'impact.empty_btn': 'പൊരുത്തങ്ങളുടെ പോർട്ടലിലേക്ക് പോകുക'
     }
   };
 
@@ -1297,9 +1627,6 @@
     return key;
   }
 
-  /**
-   * Determine initial language
-   */
   function getInitialLanguage() {
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
@@ -1320,9 +1647,6 @@
 
   let currentLanguage = getInitialLanguage();
 
-  /**
-   * Render all translations onto the DOM
-   */
   function applyTranslations(lang) {
     if (lang && SUPPORTED_LANGUAGES.includes(lang)) {
       currentLanguage = lang;
@@ -1336,7 +1660,6 @@
 
     document.documentElement.lang = currentLanguage;
 
-    // Translate text nodes
     document.querySelectorAll('[data-i18n]').forEach(node => {
       const key = node.getAttribute('data-i18n');
       const translated = t(key, currentLanguage);
@@ -1345,7 +1668,6 @@
       }
     });
 
-    // Translate placeholders
     document.querySelectorAll('[data-i18n-placeholder]').forEach(node => {
       const key = node.getAttribute('data-i18n-placeholder');
       const translated = t(key, currentLanguage);
@@ -1354,7 +1676,6 @@
       }
     });
 
-    // Translate aria-labels
     document.querySelectorAll('[data-i18n-aria-label]').forEach(node => {
       const key = node.getAttribute('data-i18n-aria-label');
       const translated = t(key, currentLanguage);
@@ -1363,7 +1684,6 @@
       }
     });
 
-    // Translate titles
     document.querySelectorAll('[data-i18n-title]').forEach(node => {
       const key = node.getAttribute('data-i18n-title');
       const translated = t(key, currentLanguage);
@@ -1372,14 +1692,12 @@
       }
     });
 
-    // Sync language select dropdowns
     document.querySelectorAll('select.lang-select, #lang-select').forEach(sel => {
       if (sel.value !== currentLanguage) {
         sel.value = currentLanguage;
       }
     });
 
-    // Dispatch languageChanged event
     window.dispatchEvent(new CustomEvent('agrilink:languageChanged', {
       detail: { language: currentLanguage }
     }));
