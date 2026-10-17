@@ -15,6 +15,19 @@
 
 const MOCK_MODE = true; // Set to false to connect to real backend server
 const API_BASE = 'http://localhost:8000';
+const CLUSTER_RADIUS_KM = 50; // Radial distance (km) from pickup hub for farmer clusters
+
+/**
+ * Helper: Capitalize place names (Village, District, State)
+ */
+function formatPlace(str) {
+  if (!str || typeof str !== 'string') return '';
+  return str
+    .trim()
+    .split(/\s+/)
+    .map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+    .join(' ');
+}
 
 // ----------------------------------------------------------------------------
 // 1. Geographic Data & District Coordinates (All 48 Districts in 8 States)
@@ -160,6 +173,30 @@ const DEMO_FARMERS = [
     district: 'Meerut',
     village: 'Mawana',
     price_per_ton: 1950,
+    is_demo: true
+  },
+  {
+    id: 'demo_f4',
+    name: 'Jaswinder Singh',
+    phone: '9876543214',
+    residue_type: 'paddy_straw',
+    quantity_tons: 25,
+    state: 'Punjab',
+    district: 'Ludhiana',
+    village: 'Khanna',
+    price_per_ton: 2150,
+    is_demo: true
+  },
+  {
+    id: 'demo_f5',
+    name: 'Daljit Singh',
+    phone: '9876543215',
+    residue_type: 'paddy_straw',
+    quantity_tons: 40,
+    state: 'Punjab',
+    district: 'Ludhiana',
+    village: 'Jagraon',
+    price_per_ton: 2200,
     is_demo: true
   }
 ];
@@ -478,7 +515,7 @@ async function getMatches() {
 }
 
 /**
- * Load Demo Data into LocalStorage (Used on matches.html)
+ * Load Demo Data into LocalStorage (Idempotent - never creates duplicates)
  */
 function loadDemoData() {
   const currentFarmers = JSON.parse(
@@ -488,34 +525,218 @@ function loadDemoData() {
     localStorage.getItem('agrilink_industry_submissions') || '[]'
   );
 
-  // Avoid duplicates
-  const farmerIds = new Set(currentFarmers.map(f => f.id));
+  // Avoid duplicates strictly by ID and key
+  const existingFarmerKeys = new Set(
+    currentFarmers.map(f => `${f.id || ''}_${f.name || ''}_${f.phone || ''}`)
+  );
   DEMO_FARMERS.forEach(demoF => {
-    if (!farmerIds.has(demoF.id)) {
+    const key = `${demoF.id}_${demoF.name}_${demoF.phone}`;
+    const idExists = currentFarmers.some(f => f.id === demoF.id);
+    if (!existingFarmerKeys.has(key) && !idExists) {
       currentFarmers.push(demoF);
+      existingFarmerKeys.add(key);
     }
   });
 
-  const industryIds = new Set(currentIndustries.map(i => i.id));
+  const existingIndustryKeys = new Set(
+    currentIndustries.map(i => `${i.id || ''}_${i.industry_name || ''}`)
+  );
   DEMO_INDUSTRIES.forEach(demoI => {
-    if (!industryIds.has(demoI.id)) {
+    const key = `${demoI.id}_${demoI.industry_name}`;
+    const idExists = currentIndustries.some(i => i.id === demoI.id);
+    if (!existingIndustryKeys.has(key) && !idExists) {
       currentIndustries.push(demoI);
+      existingIndustryKeys.add(key);
     }
   });
 
   localStorage.setItem('agrilink_farmer_submissions', JSON.stringify(currentFarmers));
   localStorage.setItem('agrilink_industry_submissions', JSON.stringify(currentIndustries));
-  console.log('[AgriLink Demo] Loaded demo dataset successfully');
+  console.log('[AgriLink Demo] Loaded demo dataset successfully (no duplicates)');
+  return { farmers: currentFarmers.length, industries: currentIndustries.length };
 }
 
 /**
- * Clear All Data from LocalStorage
+ * Reset Demo Data only (Preserves all user form submissions)
+ */
+function clearDemoData() {
+  const currentFarmers = JSON.parse(
+    localStorage.getItem('agrilink_farmer_submissions') || '[]'
+  );
+  const currentIndustries = JSON.parse(
+    localStorage.getItem('agrilink_industry_submissions') || '[]'
+  );
+  const currentBookings = JSON.parse(
+    localStorage.getItem('agrilink_bookings') || '{}'
+  );
+
+  const demoFarmerIds = new Set(DEMO_FARMERS.map(f => f.id));
+  const demoIndustryIds = new Set(DEMO_INDUSTRIES.map(i => i.id));
+
+  // Retain only user-submitted records
+  const userFarmers = currentFarmers.filter(f => !f.is_demo && !demoFarmerIds.has(f.id));
+  const userIndustries = currentIndustries.filter(i => !i.is_demo && !demoIndustryIds.has(i.id));
+
+  // Retain user bookings
+  const userBookings = {};
+  Object.entries(currentBookings).forEach(([id, b]) => {
+    if (!b.is_demo && !id.includes('demo_')) {
+      userBookings[id] = b;
+    }
+  });
+
+  localStorage.setItem('agrilink_farmer_submissions', JSON.stringify(userFarmers));
+  localStorage.setItem('agrilink_industry_submissions', JSON.stringify(userIndustries));
+  localStorage.setItem('agrilink_bookings', JSON.stringify(userBookings));
+  console.log('[AgriLink Demo] Reset demo records. Preserved user form submissions.');
+  return { farmers: userFarmers.length, industries: userIndustries.length };
+}
+
+/**
+ * Clear All Data from LocalStorage (Used on Matches Clear button)
  */
 function clearAllData() {
   localStorage.removeItem('agrilink_farmer_submissions');
   localStorage.removeItem('agrilink_industry_submissions');
   localStorage.removeItem('agrilink_bookings');
   console.log('[AgriLink Data] All submissions and bookings cleared from localStorage');
+}
+
+/**
+ * Compute Smart Collection Network (Biomass Farmer Aggregation Clusters)
+ * Radial rule: A farmer joins a cluster only if within radiusKm of the pickup hub.
+ */
+function computeClusters(radiusKm = CLUSTER_RADIUS_KM) {
+  const farmers = JSON.parse(
+    localStorage.getItem('agrilink_farmer_submissions') || '[]'
+  );
+  const industries = JSON.parse(
+    localStorage.getItem('agrilink_industry_submissions') || '[]'
+  );
+
+  if (!farmers || farmers.length === 0) {
+    return [];
+  }
+
+  // 1. Group farmers by residue type
+  const byResidue = {};
+  farmers.forEach(f => {
+    const type = f.residue_type || 'other';
+    if (!byResidue[type]) byResidue[type] = [];
+    byResidue[type].push(f);
+  });
+
+  const clusters = [];
+  let clusterIndex = 1;
+
+  // 2. Form radial clusters around a pickup hub within radiusKm
+  Object.entries(byResidue).forEach(([residueType, groupFarmers]) => {
+    // Sort descending by tonnage so largest producer serves as the natural hub candidate
+    const unassigned = [...groupFarmers].sort((a, b) => (b.quantity_tons || 0) - (a.quantity_tons || 0));
+
+    while (unassigned.length > 0) {
+      // Hub farmer: highest tonnage unassigned member
+      const hubFarmer = unassigned.shift();
+      const hubDistrict = hubFarmer.district;
+
+      const clusterMembers = [
+        {
+          ...hubFarmer,
+          name: formatPlace(hubFarmer.name),
+          village: formatPlace(hubFarmer.village),
+          district: formatPlace(hubFarmer.district),
+          state: formatPlace(hubFarmer.state),
+          distance_from_hub: 0,
+          is_hub: true
+        }
+      ];
+
+      // A farmer joins a cluster ONLY if they are within radiusKm of the cluster's pickup hub
+      const remaining = [];
+      for (const candidate of unassigned) {
+        const dist = calculateDistanceKm(candidate.district, hubDistrict);
+        if (dist <= radiusKm) {
+          clusterMembers.push({
+            ...candidate,
+            name: formatPlace(candidate.name),
+            village: formatPlace(candidate.village),
+            district: formatPlace(candidate.district),
+            state: formatPlace(candidate.state),
+            distance_from_hub: dist,
+            is_hub: false
+          });
+        } else {
+          remaining.push(candidate);
+        }
+      }
+
+      unassigned.length = 0;
+      unassigned.push(...remaining);
+
+      // Clusters with >= 2 members represent genuine aggregation
+      if (clusterMembers.length >= 2) {
+        let totalTons = 0;
+        let weightedPriceSum = 0;
+        clusterMembers.forEach(m => {
+          const q = parseFloat(m.quantity_tons) || 0;
+          totalTons += q;
+          weightedPriceSum += q * (parseFloat(m.price_per_ton) || 0);
+        });
+        const avgPrice = totalTons > 0 ? Math.round(weightedPriceSum / totalTons) : 0;
+
+        // Find best-matching industry for the combined quantity
+        let bestIndustry = null;
+        let bestScore = -1;
+
+        industries.forEach(ind => {
+          const isResidueMatch = ind.residue_type === 'any' || ind.residue_type === residueType;
+          if (!isResidueMatch) return;
+
+          const distToHub = calculateDistanceKm(hubDistrict, ind.district);
+          const priceCompatible = (ind.price_per_ton || 0) >= avgPrice;
+          const distScore = Math.max(0, 500 - distToHub);
+          const priceBonus = priceCompatible ? 500 : 0;
+          const score = distScore + priceBonus;
+
+          if (score > bestScore) {
+            bestScore = score;
+            const indDemand = parseFloat(ind.quantity_tons) || 0;
+            const coveragePct = indDemand > 0 ? Math.min(100, Math.round((totalTons / indDemand) * 100)) : 100;
+            const isPartial = indDemand > 0 && totalTons < indDemand;
+
+            bestIndustry = {
+              id: ind.id,
+              industry_name: formatPlace(ind.industry_name),
+              industry_type: ind.industry_type,
+              district: formatPlace(ind.district),
+              state: formatPlace(ind.state),
+              demand_tons: indDemand,
+              distance_km: distToHub,
+              offered_price: ind.price_per_ton,
+              coverage_percent: coveragePct,
+              is_partial: isPartial,
+              price_compatible: priceCompatible
+            };
+          }
+        });
+
+        clusters.push({
+          id: `cluster_${residueType}_${clusterIndex++}`,
+          residue_type: residueType,
+          total_tons: Math.round(totalTons * 10) / 10,
+          member_count: clusterMembers.length,
+          members: clusterMembers,
+          pickup_hub_district: formatPlace(hubDistrict),
+          pickup_hub_farmer: formatPlace(hubFarmer.name),
+          pickup_hub_village: formatPlace(hubFarmer.village),
+          avg_price: avgPrice,
+          best_industry: bestIndustry
+        });
+      }
+    }
+  });
+
+  return clusters;
 }
 
 // ----------------------------------------------------------------------------
@@ -914,11 +1135,15 @@ document.addEventListener('DOMContentLoaded', () => {
 window.AgriLinkAPI = {
   API_BASE,
   MOCK_MODE,
+  CLUSTER_RADIUS_KM,
   addFarmer,
   addIndustry,
   getMatches,
   loadDemoData,
+  clearDemoData,
   clearAllData,
+  computeClusters,
+  formatPlace,
   getBookings,
   saveBooking,
   LOCATION_DATA,
